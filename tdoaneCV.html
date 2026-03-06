@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todd Doane | CV</title>
+
+    <!-- Preconnect and Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <style>
+        /* CV specific styles extending the main theme */
+        .cv-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            text-align: left;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .cv-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-contact {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .cv-contact a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .cv-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .cv-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-section h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-job {
+            margin-bottom: 2rem;
+        }
+
+        .cv-job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cv-job h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        .cv-job-title {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        .cv-job-date {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .cv-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .cv-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .cv-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        .cv-actions {
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Todd<span class="highlight">TheTeach</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Home</a></li>
+                <li><a href="tdoaneCV.pdf" target="_blank" class="nav-cta">Download PDF CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- CV Content -->
+    <section class="section">
+        <div class="container fade-in">
+            <div class="cv-container glass-panel" style="padding: 3rem;">
+
+                <div class="cv-header">
+                    <h1 class="gradient-text">Todd W. Doane</h1>
+                    <div class="cv-contact">
+                        Tampa, FL 33615 <br>
+                        Phone: (727) 754-0019 | Email: <a href="mailto:tdoane@yahoo.com">tdoane@yahoo.com</a> <br>
+                        LinkedIn: <a href="https://linkedin.com/in/tdoane1" target="_blank">linkedin.com/in/tdoane1</a>
+                        <br>
+                        Websites: <a href="https://toddtheteach.com" target="_blank">toddtheteach.com</a>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Professional Summary</h2>
+                    <p style="line-height: 1.6;">
+                        Results-driven IT and Contact Center Architect with over 30 years diverse experience
+                        spanning enterprise telephony, cloud modernization, solution architecture, and IT service
+                        delivery. Specializes in transforming global contact centers for Fortune 100 companies
+                        using hybrid cloud solutions, SIP trunking, and intelligent routing. A proven mentor and
+                        team leader known for translating complex technical capabilities into scalable, secure, and
+                        cost-effective business solutions. Guided by core leadership principles centered on truth,
+                        fairness, respect, gratitude, and lifelong learning.
+                    </p>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Core Competencies</h2>
+                    <ul class="cv-list">
+                        <li><strong>Contact Center & Telecom Architecture:</strong> Avaya Aura, Genesys Cloud, NICE,
+                            Cisco UCCE, Amazon Connect, SIP Trunking, E.164 Dial Plan Design, Omnichannel Strategy
+                            (Voice/Chat/SMS).</li>
+                        <li><strong>Cloud & Infrastructure:</strong> AWS (Lambda, Fargate), Azure, VMware, Data Center
+                            Architecture, Mainframe Integration.</li>
+                        <li><strong>Methodologies & Management:</strong> Agile SCRUM Management, SDLC, CI/CD, Product
+                            Ownership, ITIL process methodology, Pre-sales & RFP Presentations.</li>
+                        <li><strong>Security & Compliance:</strong> PCI/HIPAA Compliance, Secure Communication
+                            Environments (DOD IL2/IL5).</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Certifications</h2>
+                    <ul class="cv-list">
+                        <li>AWS Certified Solutions Architect – Associate (Issued Feb 2022)</li>
+                        <li>Google Cloud Certified Digital Cloud Leader (Issued Jan 2023)</li>
+                        <li>Certified ScrumMaster® (CSM®) (Issued Apr 2022)</li>
+                        <li>Microsoft Certified: Azure Fundamentals (Issued Nov 2022)</li>
+                        <li><strong>Additional Technical Certifications:</strong> SSCA (SIP School Certified Associate),
+                            NNCSE (Nortel Networks), CCNA (Cisco), ENS (Extreme Networks), SCP (Sniffer), CNX.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Professional Experience</h2>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>SIOS Technology Corp. <span class="cv-job-title">| Solutions Architect / Sales
+                                    Engineer</span></h3>
+                            <span class="cv-job-date">Aug 2022 – Aug 2024</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Partnered with Sales to deliver solution designs, architectural diagrams, and technical
+                                use cases that directly contributed to software adoption and double-digit revenue
+                                growth.</li>
+                            <li>Supported marketing and sales by presenting at SAP ASUG conferences and performing
+                                technical demonstrations for the TFIR YouTube channel.</li>
+                            <li>Architected highly available SAP S4 and SAP HANA HA environments providing above 99.99%
+                                uptime.</li>
+                            <li>Identified critical technical blockers to remediate issues, enabling SIOS to
+                                successfully compete for large enterprise deals.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Avaya Inc. <span class="cv-job-title">| Sr. Solutions Engineer (Contracted via
+                                    KForce)</span></h3>
+                            <span class="cv-job-date">Oct 2021 – Jun 2022</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Led the solution engineering team in evaluating, building, and assessing cloud
+                                deployments for DOD IL2 and IL5 secure customer containers.</li>
+                            <li>Created secure, fully functional communication environments equipped with complete
+                                contact center and unified communication features.</li>
+                            <li style="opacity: 0.8; font-size: 0.9rem;">(Note: Previously held multiple roles at Avaya
+                                spanning 1998-2009 and 2012-2015, including Advanced Solutions Architect and
+                                Professional Services Engagement Manager. Key achievements included leading a massive
+                                SIP conversion for Comcast’s Central Division supporting 15,000 simultaneous calls and
+                                saving 35% in costs, and driving a 38% YoY regional growth capturing multi-million
+                                dollar contracts like a $30M Florida Light & Power deal).</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Truist Financial <span class="cv-job-title">| Sr. Solutions Architect (Contracted via
+                                    The Select Group)</span></h3>
+                            <span class="cv-job-date">May 2020 – Sep 2021</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Developed comprehensive infrastructure designs for retail and mortgage applications
+                                supporting the massive SunTrust/BB&T merger across AWS, VMware, Linux, and IBM
+                                Mainframes.</li>
+                            <li>Architected the SDLC pipeline utilizing AWS Lambda and Fargate for a new card services
+                                microservices implementation.</li>
+                            <li>Mentored incoming team members and enhanced Visio architecture templates to
+                                automatically capture metadata from CMDB and ServiceNow, reducing documentation time by
+                                30%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Omnisys, LLC <span class="cv-job-title">| Solutions Architect</span></h3>
+                            <span class="cv-job-date">Dec 2018 – May 2020</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Architected an enterprise version of the company’s IVR, Rx refill, patient messaging,
+                                and mobile applications, creating a strategic migration plan.</li>
+                            <li>Designed the Software Development Life Cycle (SDLC) and Continuous
+                                Integration/Continuous Deployment (CI/CD) operations, successfully shrinking supported
+                                software versions from over 50 down to just 2.</li>
+                            <li>Developed RACI policies for software development, implementation, and support teams to
+                                boost operational efficiency and track support triage, resulting in a CSAT score jump
+                                from 45% to 75%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Kobie Marketing, Inc. <span class="cv-job-title">| Solutions Architect / Product
+                                    Owner</span></h3>
+                            <span class="cv-job-date">2016 – 2018</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Developed comprehensive on-boarding training (Alchemy) that cut defect rates by 20% and
+                                reduced onboarding sprint time for new developers.</li>
+                            <li>Spearheaded SOAP and REST API integrations between the Alchemy application, clients,
+                                vendors, and the contact center.</li>
+                            <li>Collaboratively wrote user stories and prioritized backlogs for a massive financial
+                                loyalty program (2.4 million users), launching it successfully on time and saving the
+                                client over $1M.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Pivot Technology Solutions <span class="cv-job-title">| Solutions Consultant</span></h3>
+                            <span class="cv-job-date">2015 – 2016</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Designed and executed a national retailer’s call center PCI compliance migration for
+                                approximately 4,000 agents, generating an annual cost reduction of over $5 million.</li>
+                            <li>Simplified global IT communications for a Fortune 100 Financial Services Company,
+                                reducing maintenance expenses by up to 45%.</li>
+                            <li>Engineered a massive Cisco WiFi infrastructure for a regional hospital system spanning
+                                over 3 million square feet to support Clinical Imaging and Video on Demand.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-job">
+                        <div class="cv-job-header">
+                            <h3>Bridgewater Associates <span class="cv-job-title">| Voice Operations Engineer
+                                    (Contracted via Extropy Group)</span></h3>
+                            <span class="cv-job-date">2011 – 2012</span>
+                        </div>
+                        <ul class="cv-list">
+                            <li>Successfully exceeded goals managing a massive user migration to an Avaya voice system
+                                and decommissioning a legacy NEC system, delivering the project under budget for the
+                                world's largest hedge fund.</li>
+                            <li style="opacity: 0.8; font-size: 0.9rem;">(Additional early career experience includes
+                                software engineering, network engineering, solution architecture and IT leadership roles
+                                at Lucent Technologies, Landis & Gyr, National LAN Exchange, and Sport Court from
+                                1992-2011).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Education</h2>
+                    <ul class="cv-list">
+                        <li><strong>B.S., Mass Communication</strong>, University of Utah, Salt Lake City, UT (1995)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cv-actions">
+                    <a href="tdoaneCV.pdf" target="_blank" class="btn btn-primary">Download PDF version</a>
+                    <a href="index.html" class="btn btn-outline" style="margin-left: 1rem;">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="contact section">
+        <div class="container fade-in">
+            <div class="footer-bottom" style="margin-top: 0; border-top: none;">
+                <div class="footer-logo">Todd<span class="highlight">TheTeach</span></div>
+                <p>&copy; 2026 Todd Doane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
