@@ -598,6 +598,51 @@
   }
   
   /* ==========================================================================
+     Projects Section
+     ========================================================================== */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .project-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-tag {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  
+  .project-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  /* ==========================================================================
      Services Section
      ========================================================================== */
   .services-grid {
