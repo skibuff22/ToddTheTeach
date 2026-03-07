@@ -162,7 +162,8 @@ def run_qa(target_url, max_pages=10):
         browser.close()
 
     # Generate Report
-    report_file = f"qa_report_{domain.replace('.', '_')}.md"
+    safe_domain = domain.replace('.', '_').replace(':', '_')
+    report_file = f"qa_report_{safe_domain}.md"
     with open(report_file, 'w', encoding='utf-8') as f:
         f.write(f"# QA Report for {target_url}\n\n")
         f.write(f"Pages Crawled: {len(visited)}\n\n")
