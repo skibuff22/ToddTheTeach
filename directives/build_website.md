@@ -18,16 +18,17 @@ The Orchestrator must run the following sequence. If any step fails, FIX the cod
 1. **Build QA:**
    - Run `npm run build` in the `project_dir`.
    - EXPECTED: Exit code 0 and a successful build output.
-2. **Comprehensive QA:**
+2. **Comprehensive QA & SEO Validation:**
    - Ensure the dev server is running, then run `python executions/qa_website_comprehensive.py <local_url>`.
-   - EXPECTED: `[PASS]` output.
+   - **MANDATORY**: Ensure strict SEO Optimization checks are executed. The QA script must evaluate Title tags, Meta descriptions, Viewport tags, and properly structured Header hierarchies (H1, H2) for every page.
+   - EXPECTED: `[PASS]` output for all functional and SEO-related checks.
 3. **Product Verification:**
    - Run `python executions/verify_products.py <products_file>`.
    - This script will parse the products file, visit each Stripe link via a headless browser, and verify that the Stripe Product Name and Price match the local data exactly.
    - EXPECTED: `[PASS]` output.
 4. **Live Site Verification (Post-Deploy):**
    - After code is pushed and successfully deployed, run `python executions/qa_website_comprehensive.py <live_url>` to QA the live environment.
-   - This explicitly forces a check to ensure caching hasn't blocked the updates.
+   - This explicitly forces a check to ensure caching hasn't blocked the updates and that SEO optimizations are correctly surfacing on the public domain.
    - EXPECTED: `[PASS]` output and a correctly generated `qa_report_[domain].md`.
 
 ## Outputs
