@@ -120,6 +120,82 @@
             text-align: center;
             margin-top: 3rem;
         }
+
+        /* Print Styles for PDF Generation */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+
+            .glass-panel,
+            .cv-container {
+                background: none !important;
+                box-shadow: none !important;
+                border: none !important;
+                backdrop-filter: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+
+            .navbar,
+            .footer-bottom,
+            .cv-actions,
+            footer {
+                display: none !important;
+            }
+
+            * {
+                color: black !important;
+                text-shadow: none !important;
+            }
+
+            h1.gradient-text {
+                background: none !important;
+                -webkit-text-fill-color: #0056b3 !important;
+                color: #0056b3 !important;
+                /* Todd W. Doane in blue */
+            }
+
+            .cv-contact,
+            .cv-contact a {
+                color: #333 !important;
+                text-decoration: none !important;
+            }
+
+            .cv-section h2 {
+                color: #222 !important;
+                border-bottom: 2px solid #ccc !important;
+            }
+
+            .cv-job h3,
+            .cv-job-title,
+            .cv-list li {
+                color: #000 !important;
+            }
+
+            .cv-job-date {
+                color: #555 !important;
+            }
+
+            .cv-list li::before {
+                color: black !important;
+            }
+
+            /* Prevent page breaks */
+            .cv-section,
+            .cv-job {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            h2,
+            h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
     </style>
 </head>
 
