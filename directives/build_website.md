@@ -8,6 +8,7 @@ Perform a conclusive build quality assurance check, comprehensive website QA, an
 
 - `project_dir`: The directory of the frontend application (e.g., `toddtheteach/`).
 - `local_url`: The URL where the dev server is running (e.g., `http://localhost:5173`).
+- `live_url`: The production URL where the site is hosted (e.g., `https://toddtheteach.com`).
 - `products_file`: Path to the file containing product data (e.g., `toddtheteach/src/data/products.js`).
 
 ## Execution Tools & Loop
@@ -24,10 +25,14 @@ The Orchestrator must run the following sequence. If any step fails, FIX the cod
    - Run `python executions/verify_products.py <products_file>`.
    - This script will parse the products file, visit each Stripe link via a headless browser, and verify that the Stripe Product Name and Price match the local data exactly.
    - EXPECTED: `[PASS]` output.
+4. **Live Site Verification (Post-Deploy):**
+   - After code is pushed and successfully deployed, run `python executions/qa_website_comprehensive.py <live_url>` to QA the live environment.
+   - This explicitly forces a check to ensure caching hasn't blocked the updates.
+   - EXPECTED: `[PASS]` output and a correctly generated `qa_report_[domain].md`.
 
 ## Outputs
 
-- Success message to the user ONLY when ALL THREE checks pass sequentially in a single loop.
+- Success message to the user ONLY when ALL FOUR checks pass sequentially in a single loop.
 
 ## Edge Cases
 
