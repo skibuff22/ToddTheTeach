@@ -22,6 +22,16 @@
 
   <!-- CSS -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <style>
+    /* Responsive fixes for hero floating cards */
+    @media (max-width: 1200px),
+    (max-height: 700px) {
+      .floating {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -70,12 +80,12 @@
       <img src="images/todd-hero-nobg.png" alt="Todd The Teach"
         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; width: 100%; object-fit: contain; z-index: 5; max-height: 600px;">
 
-      <div class="glass-card floating" style="z-index: 10; left: -25%; top: 15%; max-width: 260px;">
+      <div class="glass-card floating" style="z-index: 10; left: 0%; top: 20%; max-width: 260px;">
         <div class="card-icon">🚀</div>
         <h3>Rapid Adaptation</h3>
         <p>Mastering tools faster than the documentation can print.</p>
       </div>
-      <div class="glass-card floating delay-1" style="z-index: 10; right: -25%; top: 65%; max-width: 260px;">
+      <div class="glass-card floating delay-1" style="z-index: 10; right: 0%; top: 60%; max-width: 260px;">
         <div class="card-icon">🔧</div>
         <h3>Relentless Troubleshooting</h3>
         <p>Diagnosing issues others give up on.</p>
