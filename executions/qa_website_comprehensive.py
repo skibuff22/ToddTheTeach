@@ -83,7 +83,7 @@ def run_qa(target_url, max_pages=10):
             
             try:
                 # Load page in desktop view to get fully rendered DOM
-                response = desktop_page.goto(current_url, wait_until='networkidle', timeout=15000)
+                response = desktop_page.goto(current_url, wait_until='domcontentloaded', timeout=30000)
                 
                 if not response or response.status >= 400:
                     broken_links.append((current_url, response.status if response else "Timeout/Error"))
@@ -101,7 +101,8 @@ def run_qa(target_url, max_pages=10):
                         payment_links.append(link)
 
                     # Only crawl internal links and exclude PDFs
-                    if urlparse(link).netloc == domain and not link.lower().endswith('.pdf'):
+                    parsed_link = urlparse(link)
+                    if parsed_link.netloc == domain and not parsed_link.path.lower().endswith('.pdf'):
                         clean_link = link.split('#')[0] # Remove fragments
                         if clean_link not in visited and clean_link not in to_visit:
                             to_visit.append(clean_link)
@@ -202,6 +203,9 @@ def run_qa(target_url, max_pages=10):
     # Simple pass/fail logic for orchestrator
     if broken_links or broken_images:
         print("\n[FAIL] QA Check failed due to broken links or images.")
+        sys.exit(1)
+    elif seo_issues:
+        print("\n[FAIL] QA Check failed due to missing SEO metadata (Title/Meta/H1 rules).")
         sys.exit(1)
     else:
         print("\n[PASS] QA Check passed.")
