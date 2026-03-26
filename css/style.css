@@ -611,6 +611,54 @@ img {
 }
 
 /* ==========================================================================
+     STAR Projects Section
+     ========================================================================== */
+.star-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .star-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.star-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+.star-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 0.8rem;
+}
+
+.star-content p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.star-content p strong {
+  color: var(--accent-primary);
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+.star-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
      Projects Section
      ========================================================================== */
 .projects-grid {
