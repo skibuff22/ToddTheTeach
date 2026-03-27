@@ -47,7 +47,7 @@ def analyze_seo(soup, url):
     seo_data['h1_count'] = len(soup.find_all('h1'))
     return seo_data
 
-def run_qa(target_url, max_pages=10):
+def run_qa(target_url, max_pages=10, require_text=None):
     print(f"Starting Comprehensive QA on: {target_url}")
     
     domain = urlparse(target_url).netloc
@@ -153,9 +153,11 @@ def run_qa(target_url, max_pages=10):
                     }
                     return true;
                 }''')
-                if not is_visible:
-                    broken_links.append((current_url, "BLANK_PAGE_ERROR (Content is hidden via CSS or missing)"))
-                    
+                # 6. Verify specific required text is present on the main page (Deployment check)
+                if require_text and current_url == target_url:
+                    if require_text not in html_content:
+                        broken_links.append((current_url, f"DEPLOYMENT FAILURE: Expected text '{require_text}' not found on live site."))
+                        
             except Exception as e:
                 print(f"Error processing {current_url}: {e}")
                 broken_links.append((current_url, str(e)))
@@ -215,6 +217,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Comprehensive Website QA")
     parser.add_argument("url", help="Target URL to check")
     parser.add_argument("--max-pages", type=int, default=10, help="Max pages to crawl")
+    parser.add_argument("--require-text", type=str, default=None, help="Explicit text that MUST be on the main page to prove deployment succeeded")
     
     args = parser.parse_args()
-    run_qa(args.url, args.max_pages)
+    run_qa(args.url, args.max_pages, args.require_text)

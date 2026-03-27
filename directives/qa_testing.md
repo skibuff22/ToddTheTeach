@@ -15,6 +15,7 @@ Specifically, it must:
 ## Inputs
 
 - `target_url`: The full URL of the website to test (e.g., `https://example.com`).
+- `--require-text "Some Text"` (Optional but highly recommended): A specific string that MUST be found on the live main page to prove that a recent deployment successfully took effect and wasn't cached.
 
 ## Execution Tools
 
@@ -38,3 +39,12 @@ Specifically, it must:
 - **Large Websites (1000+ pages)**: Running a full QA might take hours. The script should have an optional `--max-pages` limit or limit crawling to the main sitemap to avoid infinite loops.
 - **Dynamic Content/SPAs**: The execution tool MUST utilize a headless browser (not just simple HTTP requests) so that it waits for JavaScript to load before checking DOM elements (vital for React/Vite apps like `toddtheteach`).
 - **Payment Link Testing**: It should *verify* the payment link goes to the expected provider (e.g., Stripe, PayPal), but it should NEVER attempt to complete a transaction.
+- **Deployment Verification**: To ensure changes aren't stuck behind a cache or pushed to the wrong server, always run QA with `--require-text "Newly Added Feature String"` to fail early if the content is stale.
+
+## Mandatory Auto-Correction Workflow
+
+Per the Universal Project Standards in `GEMINI.md`, if the QA test produces *any* `[FAIL]` status (whether due to broken links, missing SEO `Title`/`Meta` tags, missing images, etc.):
+
+1. The Orchestrator **MUST immediately use its code editing tools** (`multi_replace_file_content` or `replace_file_content`) to modify the local HTML or configuration files to fix the error.
+2. The Orchestrator MUST NOT simply notify the user of the failure without fixing it first.
+3. After applying the fixes, the Orchestrator MUST restart the validation loop entirely (deploy again, QA again) until the QA script outputs `[PASS]`.

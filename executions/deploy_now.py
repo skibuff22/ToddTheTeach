@@ -23,7 +23,7 @@ def deploy_cpanel_git():
             page.fill('input[name="user"]', user)
             page.fill('input[name="pass"]', pwd)
             page.click('button[id="login_submit"]')
-            page.wait_for_load_state('networkidle')
+            page.wait_for_load_state('domcontentloaded')
             page.wait_for_timeout(5000)
             
             # Extract cpsess
@@ -36,34 +36,29 @@ def deploy_cpanel_git():
             base_url = f"{urlparse(current_url).scheme}://{urlparse(current_url).netloc}"
             git_url = f"{base_url}/{cpsess}/frontend/jupiter/version_control/index.html"
             page.goto(git_url)
-            page.wait_for_load_state('networkidle')
+            page.wait_for_load_state('domcontentloaded')
             page.wait_for_timeout(3000)
             
-            # Find the Manage button for the toddtheteach repository and click it
-            print("Navigating to repository management...")
-            manage_button = page.locator('a[href*="manage.html?uid=toddtheteach"]')
-            
-            if manage_button.count() == 0:
-                 manage_button = page.locator('a:has-text("Manage")').first
-            
-            manage_button.click()
-            page.wait_for_load_state('networkidle')
+            print("Triggering Git Pull via UAPI...")
+            pull_url = f"{base_url}/{cpsess}/execute/VersionControl/update?repository_root=/home/r1clkhqj64ol/repositories/ToddTheTeach"
+            page.goto(pull_url)
+            page.wait_for_load_state('domcontentloaded')
             page.wait_for_timeout(3000)
+            print("Pull response:", page.locator("body").text_content())
             
-            # Switch to Pull or Deploy tab
-            print("Switching to Pull or Deploy tab...")
-            page.click('a[href="#pull"]')
-            page.wait_for_timeout(2000)
+            # CRITICAL: UAPI triggers a background task. We must wait for the pull to finish before deploying.
+            print("Waiting 15 seconds for Git Pull background task to finish...")
+            page.wait_for_timeout(15000)
             
-            # Click Update from Remote
-            print("Clicking Update from Remote...")
-            page.click('button[id="btnUpdateFromRemote"]')
-            page.wait_for_timeout(5000) # Wait for pull to complete
+            print("Triggering Git Deployment via UAPI...")
+            deploy_url = f"{base_url}/{cpsess}/execute/VersionControlDeployment/create?repository_root=/home/r1clkhqj64ol/repositories/ToddTheTeach"
+            page.goto(deploy_url)
+            page.wait_for_load_state('domcontentloaded')
+            page.wait_for_timeout(3000)
+            print("Deploy response:", page.locator("body").text_content())
             
-            # Click Deploy HEAD Commit
-            print("Clicking Deploy HEAD Commit...")
-            page.click('button[id="btnDeployButton"]')
-            page.wait_for_timeout(5000) # Wait for deploy to complete
+            print("Waiting 15 seconds for Git Deploy background task to finish...")
+            page.wait_for_timeout(15000)
             
             print("[PASS] Successfully pulled and deployed ToddTheTeach via cPanel Git Version Control.")
         except Exception as e:

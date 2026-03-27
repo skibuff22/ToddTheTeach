@@ -33,38 +33,20 @@ def deploy_cpanel():
             path = urlparse(current_url).path
             cpsess = path.split('/')[1]
             
-            print("Logged in. Navigating File Manager...")
-            fm_url = f"https://p3plzcpnl508185.prod.phx3.secureserver.net:2083/{cpsess}/frontend/jupiter/filemanager/index.html?dir=/home/{user}"
-            page.goto(fm_url)
+            print("Logged in. Uploading style.css to public_html/css...")
+            upload_url_css = f"https://p3plzcpnl508185.prod.phx3.secureserver.net:2083/{cpsess}/frontend/jupiter/filemanager/upload-ajax.html?file=&dir=/home/{user}/public_html/css"
+            page.goto(upload_url_css)
             page.wait_for_load_state('networkidle')
             page.wait_for_timeout(3000)
-            
-            # Click repositories folder in the left tree
-            page.click('div[title="repositories"]')
-            page.wait_for_load_state('networkidle')
-            page.wait_for_timeout(1000)
+            page.set_input_files('input[type="file"]', 'css/style.css')
+            page.wait_for_timeout(5000)
 
-            # Click toddtheteach folder
-            page.click('div[title="toddtheteach"]')
+            print("Uploading index.html to public_html...")
+            upload_url_html = f"https://p3plzcpnl508185.prod.phx3.secureserver.net:2083/{cpsess}/frontend/jupiter/filemanager/upload-ajax.html?file=&dir=/home/{user}/public_html"
+            page.goto(upload_url_html)
             page.wait_for_load_state('networkidle')
-            page.wait_for_timeout(1000)
-
-            print("Copying files from repositories/toddtheteach to public_html...")
-            # Click Select All button
-            page.click('a:has-text("Select All")')
-            page.wait_for_timeout(500)
-            
-            # Click Copy button in the top toolbar
-            page.click('button[id="btnCopy"]')
-            page.wait_for_selector('input[id="copymove_dest"]')
-            
-            # Fill the destination path
-            page.fill('input[id="copymove_dest"]', '/public_html')
-            
-            # Confirm copy
-            page.click('button[id="btnCopyMove_Confirm"]')
-            
-            # Wait a few seconds for copy to complete
+            page.wait_for_timeout(3000)
+            page.set_input_files('input[type="file"]', 'index.html')
             page.wait_for_timeout(5000)
             
             print("[PASS] Successfully deployed ToddTheTeach via cPanel File Manager copy.")

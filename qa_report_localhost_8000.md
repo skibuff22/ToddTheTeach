@@ -11,9 +11,7 @@ No broken links found on crawled pages.
 **Pages with missing alt tags:** 0
 
 ## 3. SEO Issues
-- http://localhost:8000: Missing Meta Description
-- http://localhost:8000/tdoaneCV.html: Missing Meta Description
-- http://localhost:8000/index.html: Missing Meta Description
+No basic SEO issues found.
 
 ## 4. Payment Links Discovered
 No typical payment links (Stripe, PayPal, Checkout) found.
