@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Trigger when 15% of element is visible
+        threshold: 0.02 // Lowered to 2% so extremely tall sections still trigger on small mobile screens
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
