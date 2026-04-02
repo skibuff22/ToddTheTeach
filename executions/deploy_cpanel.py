@@ -52,8 +52,8 @@ def deploy_cpanel():
             print("[PASS] Successfully deployed ToddTheTeach via cPanel File Manager copy.")
         except Exception as e:
             print(f"[FAIL] Error during deployment: {e}")
-            page.screenshot(path="deploy_error_2.png")
-            print("Saved deploy_error_2.png")
+            page.screenshot(path="logs/deploy_error_2.png")
+            print("Saved logs/deploy_error_2.png")
         finally:
             browser.close()
 

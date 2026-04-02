@@ -26,8 +26,9 @@ The Orchestrator must run the following sequence. If any step fails, FIX the cod
    - Run `python executions/verify_products.py <products_file>`.
    - This script will parse the products file, visit each Stripe link via a headless browser, and verify that the Stripe Product Name and Price match the local data exactly.
    - EXPECTED: `[PASS]` output.
-4. **Live Site Verification (Post-Deploy):**
-   - After code is pushed and successfully deployed, run `python executions/qa_website_comprehensive.py <live_url>` to QA the live environment.
+4. **Live Site Deployment & Verification (Post-Deploy):**
+   - Execute `python executions/deploy_now.py` to automatically commit local changes, push to GitHub, and trigger the remote cPanel update.
+   - After successful push and deploy, run `python executions/qa_website_comprehensive.py <live_url> --require-text "<unique_change_string>"` to QA the live environment.
    - This explicitly forces a check to ensure caching hasn't blocked the updates and that SEO optimizations are correctly surfacing on the public domain.
    - EXPECTED: `[PASS]` output and a correctly generated `qa_report_[domain].md`.
 

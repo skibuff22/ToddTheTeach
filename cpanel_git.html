@@ -1,0 +1,2206 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll;}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <!-- Avoid indexing from search engines -->
+        <meta name="robots" content="noindex, nofollow">
+
+        <title>cPanel - Git™ Version Control</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#293a4a">
+
+        <!-- Mobile Chrome-->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-status-bar-style" content="default">
+
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <style>cp-root-variables{display:none}</style><link rel="apple-touch-icon" href="../assets/brand/cP_orange.png">
+        <meta name="apple-mobile-web-app-title" content="Git™ Version Control">
+
+        <meta name="referrer" content="origin">
+
+        <!-- Add pre-loaded styles. This is used for styles that need to be loaded before the web component bundle loads. -->
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1748526809/frontend/jupiter/styles/preload_styles.min.css" id="preload-stylesheet">
+
+        
+        <link rel="icon" href="../assets/brand/favicon.ico" type="image/x-icon">
+        
+
+        <!--
+            Load the font faces we need. These must be defined in the master template in order for our
+            global web components to have access to them. They cannot be defined in the Shadow DOM.
+        -->
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1727380609/frontend/jupiter/styles/fonts.min.css" id="custom-fonts-stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1774616617/frontend/jupiter/assets/application_icons/sprites/icon_spritemap.css">
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1748526809/frontend/jupiter/core/main_content/main_content.min.css">        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1748526809/frontend/jupiter/core/main_content/main_content_spacing.min.css">        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1705007156/frontend/jupiter/_assets/css/master-ltr.cmb.min.css">        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1705007156/frontend/jupiter/version_control/index.min.css">        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1705007155/frontend/jupiter/css/angular-chosen-spinner.min.css">        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1656366623/frontend/jupiter/libraries/chosen/1.5.1/chosen.min.css">
+        <!-- base overrides css file should go below the page specific styles.
+            These are overrides written in the past based on the assumption that
+            it gets loded last on every page.
+            NOTE: Do not move below the header JS or you delay the
+            download start time. These just need to be below the
+            last css in the header. -->
+        <link rel="stylesheet" type="text/css" href="../css/base_overrides.min.css">
+        
+        <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-SXRF&amp;l=_gaDataLayer"></script><script>
+            (function(){
+                window.PAGE = {};
+                window.MASTER = {};
+                window.NVData = {};
+                window.thisTheme = "jupiter";
+            })();
+        </script>
+
+
+          <script type="text/javascript">
+          
+            
+          
+          var interfaceConfigs=[];function register_interfacecfg_nvdata(e){interfaceConfigs.push(e)}var reset_all_interface_settings=function(e){for(var n="names="+interfaceConfigs.join("|"),t=0;t<interfaceConfigs.length;t++)n+="&"+interfaceConfigs[t]+"=",NVData[interfaceConfigs[t]]="";var i=(e||CPANEL.security_token)+"/frontend/"+window.thisTheme+"/nvset.xml";fetch(i,{method:"POST",body:n}).then((function(e){window.location.reload()})).catch((function(e){console.error("Error:",e)}))};register_interfacecfg_nvdata("ignorecharencoding");
+          </script>
+        <!-- Content Include point: GLOBAL HTML HEAD -->
+        
+        <!-- End: Content Include point -->
+    <script src="https://img1.wsimg.com/signals/js/clients/tcc/tcc.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/index.dist" src="/cPanel_magic_revision_1773095927/frontend/jupiter/version_control/index.dist.min.js?locale_optional=1&amp;locale=en&amp;locale_revision=1773096564"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="locale" src="/cPanel_magic_revision_1773095927/frontend/jupiter/libraries/cjt2-dist/plugins/locale.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/cPanel_magic_revision_1773095927/frontend/jupiter/libraries/cjt2-dist/cjt2.cpanel.cmb.min.js?locale=en&amp;locale_revision=1773096564" src="/cPanel_magic_revision_1773095927/frontend/jupiter/libraries/cjt2-dist/cjt2.cpanel.cmb.min.js?locale=en&amp;locale_revision=1773096564"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="frameworksBuild" src="/cPanel_magic_revision_1773095927/frontend/jupiter/libraries/cjt2-dist/frameworks.cmb.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/cPanel_magic_revision_1773095927/frontend/jupiter/version_control/index.cmb.min.js?locale=en&amp;locale_revision=1773096564" src="/cPanel_magic_revision_1773095927/frontend/jupiter/version_control/index.cmb.min.js?locale=en&amp;locale_revision=1773096564"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="master/master" src="/cPanel_magic_revision_1773095927/frontend/jupiter/_assets/master.min.js?locale_optional=1&amp;locale=en&amp;locale_revision=1773096564"></script><script type="text/javascript" async="" src="https://img1.wsimg.com/signals/js/plugins/scc-web-vitals/scc-web-vitals.min.js"></script></head>
+    <body id="version_control" class="cpanel yui-skin-sam cpanel_body" data-app-key="version_control">
+        
+
+        <cp-ui-load-analytics analytics-config="{&quot;canTrackUserAnalytics&quot;:0,&quot;loginUser&quot;:&quot;r1clkhqj64ol&quot;,&quot;isSandbox&quot;:0,&quot;cpAnalyticsData&quot;:{&quot;is_team_user&quot;:0,&quot;framework_css&quot;:&quot;bootstrap3&quot;,&quot;UUID_ADDED_AT_ACCOUNT_CREATION&quot;:&quot;1&quot;,&quot;ACCOUNT_AGE&quot;:511,&quot;product_version&quot;:&quot;126.0.47&quot;,&quot;server_current_license_kind&quot;:&quot;STANDARD&quot;,&quot;product_trial_status&quot;:&quot;false&quot;,&quot;team_user_roles&quot;:&quot;N/A&quot;,&quot;server_main_ip_is_private&quot;:0,&quot;server_main_ip&quot;:&quot;132.148.181.15&quot;,&quot;analytics_distribution&quot;:&quot;ULC&quot;,&quot;INITIAL_SERVER_ENV_TYPE&quot;:&quot;kvm&quot;,&quot;UUID&quot;:&quot;5822a18d-175b-4e9e-9cbf-ccd73064f2c8&quot;,&quot;framework_js&quot;:&quot;AngularJS&quot;,&quot;INITIAL_SERVER_LICENSE_TYPE&quot;:&quot;0&quot;,&quot;product_locale&quot;:&quot;en&quot;,&quot;product_interface&quot;:&quot;cPanel&quot;,&quot;server_operating_system&quot;:&quot;CloudLinux v8.10.0&quot;,&quot;TRANSFERRED_OR_RESTORED&quot;:&quot;0&quot;,&quot;product_feature_group&quot;:&quot;files&quot;,&quot;is_nat&quot;:0,&quot;product_feature&quot;:&quot;version_control&quot;,&quot;company_id&quot;:&quot;436&quot;},&quot;isUserAnalyticsRequiredByLeika&quot;:1,&quot;debugMode&quot;:0}">
+        </cp-ui-load-analytics>
+
+        
+
+
+<cp-root-variables directory-prefix="../" app-list="[{&quot;category&quot;:&quot;Files&quot;,&quot;description&quot;:&quot;File Manager&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;file_manager&quot;,&quot;name&quot;:&quot;File Manager&quot;,&quot;target&quot;:&quot;file_manager&quot;,&quot;url&quot;:&quot;filemanager/index.html&quot;,&quot;searchText&quot;:&quot;File Manager file-manager&quot;},{&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;cpanelpro/images.html&quot;,&quot;searchText&quot;:&quot;image manager resize manager scaler thumbnailer format Images&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;images&quot;,&quot;name&quot;:&quot;Images&quot;,&quot;description&quot;:&quot;Images&quot;},{&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;htaccess/index.html&quot;,&quot;description&quot;:&quot;Directory Privacy&quot;,&quot;searchText&quot;:&quot;Directory Privacy passwordprotect password protect&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Directory Privacy&quot;,&quot;key&quot;:&quot;directory_privacy&quot;},{&quot;description&quot;:&quot;Disk Usage&quot;,&quot;name&quot;:&quot;Disk Usage&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Disk Usage disk space usage disk-usage&quot;,&quot;key&quot;:&quot;disk_usage&quot;,&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;diskusage/index.html&quot;},{&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;webdav/accounts_webdav.html&quot;,&quot;description&quot;:&quot;Web Disk&quot;,&quot;searchText&quot;:&quot;Web Disk webdav webdisk&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;web_disk&quot;,&quot;name&quot;:&quot;Web Disk&quot;},{&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;ftp/accounts.html&quot;,&quot;description&quot;:&quot;FTP Accounts&quot;,&quot;searchText&quot;:&quot;FTP Accounts ftp create&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;FTP Accounts&quot;,&quot;key&quot;:&quot;ftp_accounts&quot;},{&quot;searchText&quot;:&quot;FTP Connections ftp accounts ftp session control&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;FTP Connections&quot;,&quot;key&quot;:&quot;ftp_connections&quot;,&quot;description&quot;:&quot;FTP Connections&quot;,&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;ftp/session.html&quot;},{&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;backup&quot;,&quot;searchText&quot;:&quot;Backup restore&quot;,&quot;name&quot;:&quot;Backup&quot;,&quot;description&quot;:&quot;Backup&quot;,&quot;url&quot;:&quot;backup/index.html&quot;,&quot;category&quot;:&quot;Files&quot;},{&quot;category&quot;:&quot;Files&quot;,&quot;url&quot;:&quot;backup/wizard.html&quot;,&quot;searchText&quot;:&quot;Backup Wizard restore&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Backup Wizard&quot;,&quot;key&quot;:&quot;backup_wizard&quot;,&quot;description&quot;:&quot;Backup Wizard&quot;},{&quot;description&quot;:&quot;Host Git™ repositories.&quot;,&quot;name&quot;:&quot;Git™ Version Control&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Git version control vcs repositories repository repo master checkout check out branch clone remote source code commit head gitweb history log publish deployment build continuous integration Git™ Version Control&quot;,&quot;key&quot;:&quot;version_control&quot;,&quot;url&quot;:&quot;version_control/index.html&quot;,&quot;category&quot;:&quot;Files&quot;},{&quot;target&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;sql/PhpMyAdmin.html&quot;,&quot;searchText&quot;:&quot;phpMyAdmin database&quot;,&quot;category&quot;:&quot;Databases&quot;,&quot;description&quot;:&quot;phpMyAdmin&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;php_my_admin&quot;,&quot;name&quot;:&quot;phpMyAdmin&quot;},{&quot;url&quot;:&quot;sql/index.html&quot;,&quot;category&quot;:&quot;Databases&quot;,&quot;description&quot;:&quot;MySQL® Databases&quot;,&quot;searchText&quot;:&quot;MySQL Databases MySQL® Databases&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;MySQL® Databases&quot;,&quot;key&quot;:&quot;mysql_databases&quot;},{&quot;url&quot;:&quot;sql/wizard1.html&quot;,&quot;category&quot;:&quot;Databases&quot;,&quot;description&quot;:&quot;MySQL® Database Wizard&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;mysql_database_wizard&quot;,&quot;searchText&quot;:&quot;MySQL Database Wizard mysql database MySQL® Database Wizard&quot;,&quot;name&quot;:&quot;MySQL® Database Wizard&quot;},{&quot;searchText&quot;:&quot;Remote MySQL Remote MySQL®&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;remote_mysql&quot;,&quot;name&quot;:&quot;Remote MySQL®&quot;,&quot;description&quot;:&quot;Remote MySQL®&quot;,&quot;category&quot;:&quot;Databases&quot;,&quot;url&quot;:&quot;sql/managehost.html&quot;},{&quot;description&quot;:&quot;Site Publisher&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;site_publisher&quot;,&quot;searchText&quot;:&quot;site publisher builder start website generator template Site Publisher&quot;,&quot;name&quot;:&quot;Site Publisher&quot;,&quot;url&quot;:&quot;site_publisher/index.html&quot;,&quot;category&quot;:&quot;Domains&quot;},{&quot;category&quot;:&quot;Domains&quot;,&quot;url&quot;:&quot;domains/index.html&quot;,&quot;description&quot;:&quot;Create, manage, and delete multiple domains.&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Domains&quot;,&quot;searchText&quot;:&quot;domains parked park aliases alias addon subdomain domain force https redirect Domains&quot;,&quot;key&quot;:&quot;domains&quot;},{&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Redirects&quot;,&quot;searchText&quot;:&quot;Redirects rewrite modrewrite&quot;,&quot;key&quot;:&quot;redirects&quot;,&quot;description&quot;:&quot;Redirects&quot;,&quot;url&quot;:&quot;mime/redirect.html&quot;,&quot;category&quot;:&quot;Domains&quot;},{&quot;category&quot;:&quot;Domains&quot;,&quot;url&quot;:&quot;zone_editor/index.html&quot;,&quot;description&quot;:&quot;Zone Editor&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Zone Editor&quot;,&quot;searchText&quot;:&quot;zone editor advanced simple caa cname a aaaa txt dkim dmarc spf mx srv record dns Zone Editor&quot;,&quot;key&quot;:&quot;zone_editor&quot;},{&quot;description&quot;:&quot;Manage your dynamic DNS domains.&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Dynamic DNS&quot;,&quot;searchText&quot;:&quot;dynamic dns ddns ip subdomain  Dynamic DNS&quot;,&quot;key&quot;:&quot;dynamic_dns&quot;,&quot;category&quot;:&quot;Domains&quot;,&quot;url&quot;:&quot;dynamic-dns/index.html&quot;},{&quot;category&quot;:&quot;Metrics&quot;,&quot;url&quot;:&quot;stats/lastvisitors_landing.html&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;visitors&quot;,&quot;searchText&quot;:&quot;latest visitors Visitors&quot;,&quot;name&quot;:&quot;Visitors&quot;,&quot;description&quot;:&quot;Visitors&quot;},{&quot;url&quot;:&quot;stats/errlog.html&quot;,&quot;category&quot;:&quot;Metrics&quot;,&quot;description&quot;:&quot;Errors&quot;,&quot;name&quot;:&quot;Errors&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Errors errorlog error log&quot;,&quot;key&quot;:&quot;errors&quot;},{&quot;category&quot;:&quot;Metrics&quot;,&quot;url&quot;:&quot;stats/bandwidth.html&quot;,&quot;name&quot;:&quot;Bandwidth&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Bandwidth bandmin transfer&quot;,&quot;key&quot;:&quot;bandwidth&quot;,&quot;description&quot;:&quot;Bandwidth&quot;},{&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Raw Access&quot;,&quot;searchText&quot;:&quot;Raw Access logs raw logs rawlogs&quot;,&quot;key&quot;:&quot;raw_access&quot;,&quot;description&quot;:&quot;Raw Access&quot;,&quot;url&quot;:&quot;raw/index.html&quot;,&quot;category&quot;:&quot;Metrics&quot;},{&quot;category&quot;:&quot;Metrics&quot;,&quot;url&quot;:&quot;stats/awstats_landing.html&quot;,&quot;description&quot;:&quot;Awstats&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;awstats&quot;,&quot;searchText&quot;:&quot;Awstats awstats&quot;,&quot;name&quot;:&quot;Awstats&quot;},{&quot;searchText&quot;:&quot;Webalizer stats&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;webalizer&quot;,&quot;name&quot;:&quot;Webalizer&quot;,&quot;description&quot;:&quot;Webalizer&quot;,&quot;url&quot;:&quot;stats/webalizer_landing.html&quot;,&quot;category&quot;:&quot;Metrics&quot;},{&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Webalizer FTP stats ftp&quot;,&quot;name&quot;:&quot;Webalizer FTP&quot;,&quot;key&quot;:&quot;webalizer_ftp&quot;,&quot;description&quot;:&quot;Webalizer FTP&quot;,&quot;url&quot;:&quot;stats/webalizerftp_landing.html&quot;,&quot;category&quot;:&quot;Metrics&quot;},{&quot;description&quot;:&quot;Metrics Editor&quot;,&quot;name&quot;:&quot;Metrics Editor&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Metrics Editor stats manager choose log programs&quot;,&quot;key&quot;:&quot;metrics_editor&quot;,&quot;url&quot;:&quot;statmanager/index.html&quot;,&quot;category&quot;:&quot;Metrics&quot;},{&quot;category&quot;:&quot;Metrics&quot;,&quot;url&quot;:&quot;resource_usage/resource_usage.live.pl&quot;,&quot;description&quot;:&quot;Resource Usage&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Resource Usage&quot;,&quot;searchText&quot;:&quot;Resource Usage&quot;,&quot;key&quot;:&quot;lveresusage&quot;},{&quot;url&quot;:&quot;../../3rdparty/installatron/index.cgi&quot;,&quot;category&quot;:&quot;Software&quot;,&quot;key&quot;:&quot;itgdresell&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Installatron Applications Installer&quot;,&quot;name&quot;:&quot;Installatron Applications Installer&quot;,&quot;description&quot;:&quot;Installatron Applications Installer&quot;},{&quot;url&quot;:&quot;module_installers/index.html?lang=php-pear&quot;,&quot;category&quot;:&quot;Software&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;PHP PEAR Packages&quot;,&quot;name&quot;:&quot;PHP PEAR Packages&quot;,&quot;key&quot;:&quot;php_pear_packages&quot;,&quot;description&quot;:&quot;PHP PEAR Packages&quot;},{&quot;description&quot;:&quot;Perl Modules&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Perl Modules&quot;,&quot;key&quot;:&quot;perl_modules&quot;,&quot;name&quot;:&quot;Perl Modules&quot;,&quot;url&quot;:&quot;module_installers/index.html?lang=perl&quot;,&quot;category&quot;:&quot;Software&quot;},{&quot;category&quot;:&quot;Software&quot;,&quot;url&quot;:&quot;passenger/index.html&quot;,&quot;searchText&quot;:&quot;apps passenger ruby ror gems rails Application Manager&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Application Manager&quot;,&quot;key&quot;:&quot;application_manager&quot;,&quot;description&quot;:&quot;Application Manager&quot;},{&quot;description&quot;:&quot;Optimize Website&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;optimize_website&quot;,&quot;searchText&quot;:&quot;Optimize Website&quot;,&quot;name&quot;:&quot;Optimize Website&quot;,&quot;url&quot;:&quot;optimize/index.html&quot;,&quot;category&quot;:&quot;Software&quot;},{&quot;key&quot;:&quot;lvephpsel&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Select PHP Version&quot;,&quot;name&quot;:&quot;Select PHP Version&quot;,&quot;description&quot;:&quot;Select PHP Version&quot;,&quot;url&quot;:&quot;lveversion/php_selector.live.pl&quot;,&quot;category&quot;:&quot;Software&quot;},{&quot;description&quot;:&quot;Setup Python App&quot;,&quot;searchText&quot;:&quot;Setup Python App&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Setup Python App&quot;,&quot;key&quot;:&quot;lvepythonsel&quot;,&quot;category&quot;:&quot;Software&quot;,&quot;url&quot;:&quot;lveversion/python-selector.html.tt&quot;},{&quot;category&quot;:&quot;Software&quot;,&quot;url&quot;:&quot;lveversion/ruby-selector.html.tt&quot;,&quot;description&quot;:&quot;Setup Ruby App&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;lverubysel&quot;,&quot;searchText&quot;:&quot;Setup Ruby App&quot;,&quot;name&quot;:&quot;Setup Ruby App&quot;},{&quot;name&quot;:&quot;SSH Access&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;SSH access ssh/shell Access ssh secure shell sftp SSH Access&quot;,&quot;key&quot;:&quot;ssh_access&quot;,&quot;description&quot;:&quot;SSH Access&quot;,&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;telnet/index.html&quot;},{&quot;searchText&quot;:&quot;IP Blocker ip deny manager&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;ip_blocker&quot;,&quot;name&quot;:&quot;IP Blocker&quot;,&quot;description&quot;:&quot;IP Blocker&quot;,&quot;url&quot;:&quot;denyip/index.html&quot;,&quot;category&quot;:&quot;Security&quot;},{&quot;url&quot;:&quot;ssl/index.html&quot;,&quot;category&quot;:&quot;Security&quot;,&quot;description&quot;:&quot;SSL/TLS&quot;,&quot;searchText&quot;:&quot;SSL/TLS certificate key csr&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;ssl_tls&quot;,&quot;name&quot;:&quot;SSL/TLS&quot;},{&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;api_tokens/index.html&quot;,&quot;searchText&quot;:&quot;Manage API Tokens access api connect login&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Manage API Tokens&quot;,&quot;key&quot;:&quot;api_tokens&quot;,&quot;description&quot;:&quot;Create, manage, and delete API tokens.&quot;},{&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;mime/hotlink.html&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Hotlink Protection&quot;,&quot;name&quot;:&quot;Hotlink Protection&quot;,&quot;key&quot;:&quot;hotlink_protection&quot;,&quot;description&quot;:&quot;Hotlink Protection&quot;},{&quot;key&quot;:&quot;leech_protection&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Leech Protection protect&quot;,&quot;name&quot;:&quot;Leech Protection&quot;,&quot;description&quot;:&quot;Leech Protection&quot;,&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;htaccess/leechprotect/leechprotect.html&quot;},{&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;security/tls_status/&quot;,&quot;description&quot;:&quot;SSL/TLS Status&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;SSL/TLS Status&quot;,&quot;searchText&quot;:&quot;SSL/TLS Status&quot;,&quot;key&quot;:&quot;tls_status&quot;},{&quot;category&quot;:&quot;Security&quot;,&quot;url&quot;:&quot;security/2fa/index.html&quot;,&quot;name&quot;:&quot;Two-Factor Authentication&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Two Factor Authentication 2fa tfa Two-Factor Authentication&quot;,&quot;key&quot;:&quot;two_factor_authentication&quot;,&quot;description&quot;:&quot;Two-Factor Authentication&quot;},{&quot;searchText&quot;:&quot;email accounts mail pop imap smtp Email Accounts&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Email Accounts&quot;,&quot;key&quot;:&quot;email_accounts&quot;,&quot;description&quot;:&quot;Email Accounts&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/pops/index.html&quot;},{&quot;description&quot;:&quot;Forwarders&quot;,&quot;key&quot;:&quot;forwarders&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Forwarders forward&quot;,&quot;name&quot;:&quot;Forwarders&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/fwds.html&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/email_routing.html&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;MX Entry Email Routing dns&quot;,&quot;name&quot;:&quot;Email Routing&quot;,&quot;key&quot;:&quot;email_routing&quot;,&quot;description&quot;:&quot;Email Routing&quot;},{&quot;description&quot;:&quot;Autoresponders&quot;,&quot;searchText&quot;:&quot;Autoresponders autoresponder auto responders&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;autoresponders&quot;,&quot;name&quot;:&quot;Autoresponders&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/autores.html&quot;},{&quot;description&quot;:&quot;Default Address&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Default Address&quot;,&quot;searchText&quot;:&quot;Default Address&quot;,&quot;key&quot;:&quot;default_address&quot;,&quot;url&quot;:&quot;mail/def.html&quot;,&quot;category&quot;:&quot;Email&quot;},{&quot;description&quot;:&quot;Track Delivery&quot;,&quot;searchText&quot;:&quot;Track Delivery Email Trace email mail delivery report&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Track Delivery&quot;,&quot;key&quot;:&quot;track_delivery&quot;,&quot;url&quot;:&quot;mail/route.html&quot;,&quot;category&quot;:&quot;Email&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/filters/userfilters.html&quot;,&quot;description&quot;:&quot;Global Email Filters&quot;,&quot;searchText&quot;:&quot;Global Email Filters filter account level filtering&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Global Email Filters&quot;,&quot;key&quot;:&quot;global_email_filters&quot;},{&quot;description&quot;:&quot;Email Filters&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;User Filters Email user level Filtering filter Email Filters&quot;,&quot;name&quot;:&quot;Email Filters&quot;,&quot;key&quot;:&quot;email_filters&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/filters/managefilters.html&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/csvimport.html&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;address_importer&quot;,&quot;searchText&quot;:&quot;Address Importer Import Addresses Forwarders Mail csv import xls import&quot;,&quot;name&quot;:&quot;Address Importer&quot;,&quot;description&quot;:&quot;Address Importer&quot;},{&quot;description&quot;:&quot;Spam Filters&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;apache_spam_assassin&quot;,&quot;searchText&quot;:&quot;Filtering Spam Assassin spamassassin Apache SpamAssassin Spam Filters&quot;,&quot;name&quot;:&quot;Spam Filters&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/spam/index.html&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;gpg/index.html&quot;,&quot;description&quot;:&quot;Encryption&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;encryption&quot;,&quot;searchText&quot;:&quot;Encryption gpg keys GnuPG Keys&quot;,&quot;name&quot;:&quot;Encryption&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/calendars_and_contacts/index.html&quot;,&quot;description&quot;:&quot;Calendars and Contacts&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Calendars and Contacts&quot;,&quot;searchText&quot;:&quot;email calendar contact address book CalDAV CardDAV Calendars and Contacts&quot;,&quot;key&quot;:&quot;calendar_and_contacts&quot;},{&quot;url&quot;:&quot;manage-calendar-access/index.html&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;description&quot;:&quot;Delegate access rights for a user’s calendar &amp;amp; contacts to other users.&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;calendar delegation Calendars and Contacts Sharing&quot;,&quot;key&quot;:&quot;manage_calendar_access&quot;,&quot;name&quot;:&quot;Calendars and Contacts Sharing&quot;},{&quot;url&quot;:&quot;calendar-contact-management/index.html&quot;,&quot;category&quot;:&quot;Email&quot;,&quot;name&quot;:&quot;Calendars and Contacts Management&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;calendar contact management address book addressbook Calendars and Contacts Management&quot;,&quot;key&quot;:&quot;calendar_contact_management&quot;,&quot;description&quot;:&quot;Calendars and Contacts Management&quot;},{&quot;category&quot;:&quot;Email&quot;,&quot;url&quot;:&quot;mail/manage_disk_usage/&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;email_disk_usage&quot;,&quot;searchText&quot;:&quot;email accounts mail disk usage bytes mb size Email Disk Usage&quot;,&quot;name&quot;:&quot;Email Disk Usage&quot;,&quot;description&quot;:&quot;Email Disk Usage&quot;},{&quot;description&quot;:&quot;Installatron Applications Installer&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Installatron Applications Installer&quot;,&quot;name&quot;:&quot;Installatron Applications Installer&quot;,&quot;key&quot;:&quot;itgdresell_widget_content&quot;,&quot;url&quot;:&quot;../../3rdparty/installatron/index.cgi&quot;,&quot;category&quot;:&quot;Applications&quot;},{&quot;description&quot;:&quot;Installatron Applications Installer&quot;,&quot;name&quot;:&quot;Installatron Applications Installer&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Installatron Applications Installer&quot;,&quot;key&quot;:&quot;itroot_widget_content&quot;,&quot;category&quot;:&quot;Applications&quot;,&quot;url&quot;:&quot;../../3rdparty/installatron/index.cgi&quot;},{&quot;description&quot;:&quot;View and manage your account preferences.&quot;,&quot;searchText&quot;:&quot;account preferences consent privacy notification system position  Account Preferences&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Account Preferences&quot;,&quot;key&quot;:&quot;account_preferences&quot;,&quot;category&quot;:&quot;Preferences&quot;,&quot;url&quot;:&quot;account-preferences/index.html&quot;},{&quot;url&quot;:&quot;setlang/index.html&quot;,&quot;category&quot;:&quot;Preferences&quot;,&quot;description&quot;:&quot;Change Language&quot;,&quot;key&quot;:&quot;change_language&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;language setlang Change Language&quot;,&quot;name&quot;:&quot;Change Language&quot;},{&quot;category&quot;:&quot;Preferences&quot;,&quot;url&quot;:&quot;contact/index.html&quot;,&quot;description&quot;:&quot;Contact Information&quot;,&quot;searchText&quot;:&quot;contact email Contact Information&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Contact Information&quot;,&quot;key&quot;:&quot;contact_information&quot;},{&quot;category&quot;:&quot;Preferences&quot;,&quot;url&quot;:&quot;user_manager/index.html&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;User Manager&quot;,&quot;searchText&quot;:&quot;password change ftp email webdisk webdav service User Manager&quot;,&quot;key&quot;:&quot;user_manager&quot;,&quot;description&quot;:&quot;Manage the users who can access various systems on your cPanel account.&quot;},{&quot;url&quot;:&quot;terminal/index.html&quot;,&quot;category&quot;:&quot;Advanced&quot;,&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;terminal&quot;,&quot;searchText&quot;:&quot;terminal bash tcsh command line shell ssh Terminal&quot;,&quot;name&quot;:&quot;Terminal&quot;,&quot;description&quot;:&quot;Access an in-browser terminal application for direct command-line access within a cPanel session.&quot;},{&quot;searchText&quot;:&quot;Cron Jobs cronjob crontab edit&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Cron Jobs&quot;,&quot;key&quot;:&quot;cron_jobs&quot;,&quot;description&quot;:&quot;Cron Jobs&quot;,&quot;url&quot;:&quot;cron/index.html&quot;,&quot;category&quot;:&quot;Advanced&quot;},{&quot;description&quot;:&quot;Track DNS&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;Track DNS&quot;,&quot;searchText&quot;:&quot;Track DNS traceroute tracert dnslookup dig network tools&quot;,&quot;key&quot;:&quot;track_dns&quot;,&quot;url&quot;:&quot;net/index.html&quot;,&quot;category&quot;:&quot;Advanced&quot;},{&quot;url&quot;:&quot;indexmanager/index.html&quot;,&quot;category&quot;:&quot;Advanced&quot;,&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Indexes index manager&quot;,&quot;name&quot;:&quot;Indexes&quot;,&quot;key&quot;:&quot;indexes&quot;,&quot;description&quot;:&quot;Indexes&quot;},{&quot;url_is_absolute&quot;:0,&quot;searchText&quot;:&quot;Error Pages errorlog error_log error log&quot;,&quot;key&quot;:&quot;error_pages&quot;,&quot;name&quot;:&quot;Error Pages&quot;,&quot;description&quot;:&quot;Error Pages&quot;,&quot;url&quot;:&quot;err/index.html&quot;,&quot;category&quot;:&quot;Advanced&quot;},{&quot;url_is_absolute&quot;:0,&quot;key&quot;:&quot;apache_handlers&quot;,&quot;searchText&quot;:&quot;Apache Handlers apache handlers extension configure&quot;,&quot;name&quot;:&quot;Apache Handlers&quot;,&quot;description&quot;:&quot;Apache Handlers&quot;,&quot;category&quot;:&quot;Advanced&quot;,&quot;url&quot;:&quot;mime/handle.html&quot;},{&quot;url&quot;:&quot;mime/mime.html&quot;,&quot;category&quot;:&quot;Advanced&quot;,&quot;description&quot;:&quot;MIME Types&quot;,&quot;searchText&quot;:&quot;MIME Types mimetype types&quot;,&quot;url_is_absolute&quot;:0,&quot;name&quot;:&quot;MIME Types&quot;,&quot;key&quot;:&quot;mime_types&quot;},{&quot;searchText&quot;:&quot;Notifications&quot;,&quot;name&quot;:&quot;Notifications&quot;,&quot;url&quot;:&quot;notifications/index.html.tt&quot;},{&quot;url&quot;:&quot;index.html&quot;,&quot;name&quot;:&quot;Home&quot;,&quot;searchText&quot;:&quot;Home Main&quot;}]" main-menu-links="[{&quot;iconSvg&quot;:&quot;\u003Csvg xmlns=\&quot;http://www.w3.org/2000/svg\&quot; viewBox=\&quot;0 0 24 24\&quot; width=\&quot;24\&quot; height=\&quot;24\&quot;&gt;\u003Cpath fill=\&quot;none\&quot; d=\&quot;M0 0h24v24H0z\&quot;/&gt;\u003Cpath fill=\&quot;var(--cp-tertiary-contrast)\&quot; d=\&quot;M5.33 3.271a3.5 3.5 0 0 1 4.254 4.963l10.709 10.71-1.414 1.414-10.71-10.71a3.502 3.502 0 0 1-4.962-4.255L5.444 7.63a1.5 1.5 0 1 0 2.121-2.121L5.329 3.27zm10.367 1.884l3.182-1.768 1.414 1.414-1.768 3.182-1.768.354-2.12 2.121-1.415-1.414 2.121-2.121.354-1.768zm-6.718 8.132l1.414 1.414-5.303 5.303a1 1 0 0 1-1.492-1.327l.078-.087 5.303-5.303z\&quot;/&gt;\u003C/svg&gt;&quot;,&quot;userText&quot;:&quot;Tools&quot;,&quot;linkUrl&quot;:&quot;index.html&quot;,&quot;id&quot;:&quot;tools-main-menu&quot;},{&quot;iconSvg&quot;:&quot;\u003Csvg version=\&quot;1.1\&quot; viewBox=\&quot;0 0 52 52\&quot; width=\&quot;24\&quot; height=\&quot;24\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot;&gt;\u003Cpath d=\&quot;m0 0v41.01a10.583 10.583 0 0 0 10.584 10.584h41.01v-41.01a10.583 10.583 0 0 0 -10.584 -10.584h-41.01zm25.797 6.6152c0.4197 0 0.83771 0.013766 1.2539 0.041016 0.4188 0.02744 0.8359 0.068547 1.25 0.12305 0.4157 0.05472 0.82848 0.12164 1.2383 0.20312 0.4109 0.08175 0.81896 0.17697 1.2227 0.28516 0.4046 0.10843 0.80507 0.23077 1.2012 0.36523 0.3963 0.13457 0.78928 0.28131 1.1758 0.44141 0.3866 0.16015 0.76718 0.33434 1.1426 0.51953 0.3752 0.18497 0.74462 0.38043 1.1074 0.58984 0.3619 0.209 0.71605 0.43125 1.0645 0.66406 0.3474 0.23213 0.68868 0.47517 1.0215 0.73047 0.3313 0.2541 0.6553 0.52028 0.9707 0.79688 0.3135 0.2752 0.61922 0.56052 0.91602 0.85742 0.2969 0.2968 0.58222 0.60242 0.85742 0.91602 0.2767 0.3155 0.54268 0.6394 0.79688 0.9707 0.2551 0.3326 0.49837 0.67233 0.73047 1.0195 0.2328 0.3485 0.45496 0.70441 0.66406 1.0664 0.2093 0.3628 0.4066 0.73222 0.5918 1.1074 0.185 0.3754 0.35758 0.75803 0.51758 1.1445 0.1604 0.3867 0.30671 0.77733 0.44141 1.1738 0.1344 0.396 0.25683 0.79667 0.36523 1.2012 0.1083 0.4038 0.20336 0.81166 0.28516 1.2227 0.0815 0.4097 0.14842 0.82258 0.20312 1.2383 0.0545 0.4139 0.095447 0.8314 0.12305 1.25 0.0272 0.4164 0.041016 0.83411 0.041016 1.2539 0 0.4197-0.013816 0.83771-0.041016 1.2539-0.0276 0.4188-0.068547 0.8359-0.12305 1.25-0.0547 0.4157-0.12162 0.82848-0.20312 1.2383-0.0818 0.4109-0.17686 0.81896-0.28516 1.2227-0.1084 0.4046-0.23053 0.80507-0.36523 1.2012-0.1344 0.3963-0.28131 0.78928-0.44141 1.1758-0.16 0.3866-0.33238 0.76718-0.51758 1.1426-0.185 0.3752-0.3825 0.74462-0.5918 1.1074-0.2091 0.3619-0.43126 0.71605-0.66406 1.0645-0.2323 0.3474-0.47517 0.68868-0.73047 1.0215-0.2543 0.3313-0.52018 0.6553-0.79688 0.9707-0.2749 0.3135-0.56052 0.61922-0.85742 0.91602-0.2968 0.2969-0.60232 0.58222-0.91602 0.85742-0.3154 0.2767-0.6395 0.54268-0.9707 0.79688-0.3326 0.2551-0.67408 0.49837-1.0215 0.73047-0.3484 0.2328-0.70225 0.45496-1.0645 0.66406-0.3627 0.2093-0.73222 0.4066-1.1074 0.5918-0.3751 0.185-0.75628 0.35758-1.1426 0.51758-0.3868 0.1604-0.77938 0.30671-1.1758 0.44141-0.3961 0.1344-0.79657 0.25683-1.2012 0.36523-0.4037 0.1083-0.81176 0.20336-1.2227 0.28516-0.4098 0.0815-0.82258 0.14842-1.2383 0.20312-0.414 0.0545-0.8314 0.095447-1.25 0.12305-0.4164 0.0272-0.83411 0.041016-1.2539 0.041016-0.428-3e-4 -0.85359-0.014669-1.2754-0.042969-0.4267-0.0285-0.85023-0.070853-1.2695-0.12695-0.4235-0.0566-0.84281-0.12684-1.2578-0.21094-0.4184-0.0847-0.83144-0.18302-1.2402-0.29492-0.4115-0.1125-0.81815-0.23805-1.2188-0.37695-0.4029-0.1397-0.80061-0.29358-1.1914-0.45898-0.3925-0.1659-0.77715-0.34416-1.1562-0.53516-0.3802-0.1918-0.75354-0.39543-1.1191-0.61133-0.3666-0.2164-0.72537-0.44565-1.0762-0.68555-0.3513-0.2403-0.695-0.49121-1.0293-0.75391-0.3344-0.2628-0.66036-0.53591-0.97656-0.82031-0.3162-0.2842-0.62312-0.57997-0.91992-0.88477-0.2965-0.3046-0.58328-0.61946-0.85938-0.94336-0.2755-0.3233-0.54082-0.65615-0.79492-0.99805-0.2534-0.3407-0.4956-0.68868-0.72656-1.0469-0.22989-0.3567-0.44766-0.7226-0.6543-1.0957-0.2055-0.3709-0.39871-0.74847-0.58008-1.1348-0.18018-0.3834-0.34857-0.77428-0.50391-1.1719-0.15398-0.3943-0.29529-0.79572-0.42383-1.2031-0.12732-0.4035-0.24244-0.81312-0.34375-1.2285-0.10017-0.4106-0.18793-0.8286-0.26172-1.25h1.2598 1.2578 1.2578 1.2598 1.2578 1.2578 1.2598 1.2578 1.2598 1.2578 1.2578 1.2598 1.2578 1.2598 1.2578 0.003906c0.4481-6e-4 0.87397-0.090054 1.2637-0.25195 0.4038-0.1678 0.76797-0.412 1.0723-0.7168 0.3043-0.3045 0.5493-0.66827 0.7168-1.0723 0.1614-0.3897 0.25-0.81752 0.25-1.2656 0-0.4482-0.0886-0.87592-0.25-1.2656-0.1675-0.4041-0.4125-0.76767-0.7168-1.0723-0.3046-0.3046-0.66827-0.549-1.0723-0.7168-0.3895-0.1619-0.81557-0.25155-1.2637-0.25195h-0.003906-1.2578-1.2598-1.2578-1.2598-1.2578-1.2578-1.2598-1.2578-1.2578-1.2598-1.2578-1.2578-1.2598-1.2578-1.2598c0.07379-0.4215 0.16158-0.8393 0.26172-1.25 0.10131-0.4155 0.21646-0.82502 0.34375-1.2285 0.12856-0.4074 0.26985-0.80872 0.42383-1.2031 0.15531-0.3977 0.32375-0.78828 0.50391-1.1719 0.18137-0.3861 0.37461-0.76387 0.58008-1.1348 0.20667-0.373 0.42435-0.7391 0.6543-1.0957 0.23093-0.3582 0.47326-0.70618 0.72656-1.0469 0.254-0.3417 0.51952-0.67485 0.79492-0.99805 0.2762-0.324 0.56288-0.63896 0.85938-0.94336 0.2969-0.3048 0.60372-0.60057 0.91992-0.88477 0.3162-0.2844 0.64216-0.55751 0.97656-0.82031 0.3342-0.2627 0.6781-0.51376 1.0293-0.75391 0.3507-0.23982 0.70967-0.46914 1.0762-0.68555 0.3658-0.216 0.73874-0.41959 1.1191-0.61133 0.3791-0.19111 0.76375-0.36908 1.1562-0.53516 0.3907-0.16534 0.78861-0.31939 1.1914-0.45898 0.4007-0.13883 0.80715-0.2645 1.2188-0.37695 0.4088-0.11171 0.82174-0.21012 1.2402-0.29492 0.4149-0.08406 0.83441-0.15421 1.2578-0.21094 0.4193-0.05619 0.84283-0.098403 1.2695-0.12695 0.4218-0.02821 0.84739-0.042599 1.2754-0.042969z\&quot; fill=\&quot;#fff\&quot; stroke-width=\&quot;.26458\&quot;/&gt;\u003C/svg&gt;&quot;,&quot;userText&quot;:&quot;Applications&quot;,&quot;id&quot;:&quot;itroot-main-menu&quot;,&quot;linkUrl&quot;:&quot;../../3rdparty/installatron/index.cgi&quot;}]" app-name="cpanel" primary-domain="" app-search-results-limit="10" company-id="436" cpanel-full-version="11.126.0.47" cpanel-app-key="version_control"></cp-root-variables>
+
+<!-- skipnav link for screenreader users -->
+<a href="#content" class="sr-only visually-hidden-focusable">Skip to main content</a>
+
+<div id="page-overlay" class="page-overlay"></div>
+
+<div id="wrap" class="cp-layout-page">
+    <div id="glass-navbar-overlay"></div>
+    <a href="#content" class="sr-only visually-hidden-focusable">Skip to main content</a>
+    
+    
+
+    
+    <aside id="cp-main-menu-container" class="cp-layout-main-menu">
+        <cp-main-menu logo-src="/cPanel_magic_revision_1705006209/frontend/jupiter/brand/cpanel-logo-white.svg" logo-alt-text=""></cp-main-menu>
+    </aside>
+    
+
+    <div class="cp-layout-wrapper">
+        <header class="cp-layout-header  cp-layout-header--with-main-menu ">
+            <!--  Single quotes needed to pass the props into the web component correctly. -->
+            <cp-header focus-search="false" integrations-info="{&quot;customer_service_app_info&quot;:&quot;&quot;,&quot;support_app_info&quot;:&quot;&quot;,&quot;billing_app_info&quot;:&quot;&quot;,&quot;upgrade_app_info&quot;:null}" logo-alt-text="" logo-src="/cPanel_magic_revision_1705006209/frontend/jupiter/brand/cpanel-logo-orange.svg"></cp-header>
+
+            <!-- Content Include point: GLOBAL <html><body><header> content -->
+            <script>
+  window._gaDataLayer = window._gaDataLayer || [];
+  window._gaDataLayer.push({ 'app': 'cp-shz' });
+  window._gaDataLayer.push({ 'server': 'p3plzcpnl508185' });
+  window._gaDataLayer.push({ 'dcenter': 'p3' });
+  window._gaDataLayer.push({ 'uid': '10126105' });
+  window._gaDataLayer.push({ 'cp_id': '10126105' });
+  window._gaDataLayer.push({ 'cp_cl': '8' });
+</script>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','_gaDataLayer','GTM-SXRF');</script>
+            <!-- End: Content Include point -->
+
+            <!-- Content Include point: APP HEAD Include-->
+                
+            <!-- End: Content Include point -->
+        </header>
+
+        <script type="text/javascript">
+            (function() {
+                const header = document.querySelector('cp-header');
+                header.addEventListener('menuItemPress', event => {
+                    if(event.detail.id === "menu-reset-link") {
+                        reset_all_interface_settings('/cpsess6280454157')
+                    }
+                });
+            })();
+        </script>
+        
+        
+
+        <!-- Content Include point: APP specific include point after the global header includes. -->
+        
+        <!-- End: Content Include point -->
+
+        <!-- PAGE TEMPLATE'S CONTENT START -->
+        <div id="content" class="cp-layout-main-content  cp-layout-main-content--with-main-menu   cp-layout-main-content--with-header ">
+            <div class="container-lg">
+            
+            
+
+            <!-- Banner Section - now controlled via a plugin -->
+            
+            
+<!-- banner -->
+
+<!-- banner -->
+            
+
+            
+
+                            <h1 class="page-header">
+                    <div id="pageHeading" class="page-title-section">
+                        <span class="page-title">Git™ Version Control</span>
+                        
+                        
+                        
+                    </div>
+                </h1>
+                
+            
+
+            
+
+            
+<!-- NOTE: leave the alert-group in single quotes -->
+<div alert-group="'versionControl'" style="height: auto;">
+    <div class="alert-list-container position-top-right" ng-class="[ getPositionClasses(), {
+        'show-scroll-bar': needsScrollbar(),
+    }]">
+        <div class="alert-list"><!-- Used to get the full height of the list, since alert-list-container can be constrained -->
+            <!-- ngRepeat: alert in alerts -->
+         </div>
+     </div>
+    <!-- ngIf: alertsPresent -->
+</div>
+
+<!-- ngView:  --><div id="viewContent" class="section" ng-view="" style="">
+<!-- ngIf: !repositories.hasShellAccess -->
+
+
+<div class="description">
+    Create and manage Git™ repositories. You can use Git to maintain any set of files and track the history of changes from multiple editors (version control). For more information, read our <a target="gitVersionControl" id="lnkGitVersionDocs" href="https://go.cpanel.net/GitVersionControl">documentation</a>.
+</div>
+
+<div id="tableShowHideContainer">
+    <div class="row action-row">
+        <div class="col-xs-12">
+            <div class="pull-right">
+                <button id="btnCreateRepositories" class="btn btn-primary alignment" type="button" ng-click="repositories.createRepository()" title="Create repository.">
+                    Create
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- search and pagination controls -->
+    <div id="paginationControls" class="row search-page-container">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="input-group ng-valid" id="filterRepoList" ng-model="repositories.meta.searchText" placeholder="Search" autofocus="autofocus" ng-change="repositories.searchList()" name="">
+    <input type="text" id="filterRepoList_input" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Search" title="Search" ng-model="filterText" ng-model-options="modelOptions" ng-keyup="clear($event)" prevent-default-on-enter="" auto-focus="true" aria-label="Search" name="">
+    <span class="input-group-btn">
+        <button id="filterRepoList_submit_btn" class="btn btn-default" ng-click="filterText=''" type="button" ng-attr-aria-label="{{ !filterText ? ariaLabelSearch : ariaLabelClear }}" aria-label="Search">
+            <span class="glyphicon glyphicon-search" ng-class="{ 'glyphicon-search' : !filterText, 'glyphicon-remove' :filterText  }" aria-hidden="true">
+            </span>
+        </button>
+    </span>
+</div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div id="paginator" class="pagination-container pull-right flip hidden-xs hidden-sm">
+                <div class="page-size ng-valid" id="topPageSize" allowed-sizes="repositories.meta.pageSizes" total-items="repositories.meta.totalItems" ng-model="repositories.meta.pageSize" show-all="false" ng-change="repositories.selectPageSize()" name="">
+    <div ng-hide="autoHide &amp;&amp; options[0].value &gt;= totalItems" class="form-group">
+        <label for="topPageSize_select" class="title">Page Size</label>
+        <select id="topPageSize_select" class="form-control ng-pristine ng-untouched ng-valid" ng-options="size.value as size.label for size in options" ng-model="pageSize" name=""><option value="number:10" label="10" selected="selected">10</option><option value="number:20" label="20">20</option><option value="number:50" label="50">50</option><option value="number:100" label="100">100</option></select>
+    </div>
+</div>
+                <ul class="pagination ng-valid" aria-label="Pagination" id="topPager" ng-change="repositories.selectPage()" ng-model="repositories.meta.pageNumber" max-size="0" items-per-page="repositories.meta.pageSize" total-items="repositories.meta.totalItems" direction-links="true" boundary-links="true" rotate="false" first-text="&lt;&lt;" last-text="&gt;&gt;" previous-text="&lt;" next-text="&gt;" name="" style="">
+    <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noPrevious()}" class="disabled" style="">
+        <a id="topPager_first" href="" ng-click="selectPage(1)" aria-label="Go to first page.">
+            &lt;&lt;
+        </a>
+    </li><!-- end ngIf: boundaryLinks -->
+    <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noPrevious()}" class="disabled" style="">
+        <a id="topPager_previous" href="" ng-click="selectPage(page - 1)" aria-label="Go to previous page.">
+            &lt;
+        </a>
+    </li><!-- end ngIf: directionLinks -->
+    <!-- ngRepeat: page in pages track by $index -->
+    <!-- ngIf: directionLinks --><li ng-if="directionLinks" ng-class="{disabled: noNext()}" class="disabled" style="">
+        <a id="topPager_next" href="" ng-click="selectPage(page + 1)" aria-label="Go to next page.">
+            &gt;
+        </a>
+    </li><!-- end ngIf: directionLinks -->
+    <!-- ngIf: boundaryLinks --><li ng-if="boundaryLinks" ng-class="{disabled: noNext()}" class="disabled" style="">
+        <a id="topPager_last" href="" ng-click="selectPage(totalPages)" aria-label="Go to last page.">
+            &gt;&gt;
+        </a>
+    </li><!-- end ngIf: boundaryLinks -->
+</ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- table stats -->
+    <div id="tableStats" class="row hidden-xs hidden-sm">
+        <div class="col-xs-8">
+            <div class="page-stats selected-stats">
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div id="paginationMessage" class="page-stats pull-right flip">
+            Displaying 1 to 1 out of 1 item
+            </div>
+        </div>
+    </div>
+
+    <!-- table container -->
+    <div id="tableContainer">
+        <table id="table" class="table table-striped-child responsive-table">
+            <thead>
+                <tr>
+                    <th id="repoHeader">
+                        <a class="sort-link" ng-click="sort(sortValue)" href="javascript:void(0)" toggle-sort="" id="sortByRepo" onsort="repositories.sortList()" sort-meta="repositories.meta" sort-field="name">
+    <span ng-transclude=""><span>
+                            Repository
+                        </span></span>
+    <span ng-hide="sortMeta.sortBy !== sortField" class="">
+        <i ng-class="{true: 'icon-arrow-up', false: 'icon-arrow-down'}[getDir() == 'asc']" ng-attr-title="{{ getTitle() }}" title="Ascending" class="icon-arrow-up"></i>
+    </span>
+</a>
+                    </th>
+                    <th id="remoteHeader" class="hidden-xs">
+                        <a class="sort-link" ng-click="sort(sortValue)" href="javascript:void(0)" toggle-sort="" id="sortByPath" onsort="repositories.sortList()" sort-meta="repositories.meta" sort-field="repository_root">
+    <span ng-transclude=""><span>
+                            Repository Path
+                        </span></span>
+    <span ng-hide="sortMeta.sortBy !== sortField" class="ng-hide">
+        <i ng-class="{true: 'icon-arrow-up', false: 'icon-arrow-down'}[getDir() == 'asc']" ng-attr-title="{{ getTitle() }}" title="Ascending" class="icon-arrow-up"></i>
+    </span>
+</a>
+                    </th>
+                    <th class="action-column">
+                        <!-- Place holder for create and bulk actions for later -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loading Message row -->
+                <tr id="loadingNotice" class="info empty-row ng-hide" ng-show="repositories.isLoading" style="">
+                    <td colspan="3" id="loadingMessage">
+                        <i id="loadingSpinner" class="fas fa-spinner fa-spin"></i>
+                        Loading …
+                    </td>
+                </tr>
+
+                <!-- Empty Search Message row-->
+                <tr id="emptySearchListNotice" class="info empty-row ng-hide" ng-show="repositories.meta.searchText !== '' &amp;&amp;
+                        repositories.filteredList.length == 0 &amp;&amp;
+                        !repositories.isLoading &amp;&amp;
+                        !repositories.reloadRequired">
+                    <td colspan="3" id="emptySearchMessage">
+                        The system could not find any repositories that match your criteria. <a id="lnkSearchCreate" class="search-create-link" title="Create repository." href="#/create">Create</a>
+                    </td>
+                </tr>
+
+                <!-- Empty Message row-->
+                <tr id="emptyListNotice" class="info empty-row ng-hide" ng-show="repositories.filteredList.length == 0 &amp;&amp;
+                        !repositories.isLoading &amp;&amp;
+                        repositories.meta.searchText == '' &amp;&amp;
+                        !repositories.reloadRequired">
+                    <td colspan="3" id="emptyMessage">
+                        The system could not find any repositories. <a id="lnkEmptyCreate" class="search-create-link" title="Create repository." href="#/create">Create</a>
+                    </td>
+                </tr>
+
+                <!-- list repeater -->
+                <!-- ngRepeat: repo in repositories.filteredList track by repo.repository_root --><tr ng-repeat-start="repo in repositories.filteredList track by repo.repository_root" ng-show="!repositories.isLoading" ng-class="{warning:repo.delete_requested, info:repo.cloneInProgress, success:repo.cloneState == 'complete'}" data-testid="repoInfo_home_r1clkhqj64ol_repositories_ToddTheTeach" class="" style="">
+                    <td>
+                        <div class="row-expand-container">
+                            <button id="lnkToggleViewRepoInfo_home_r1clkhqj64ol_repositories_ToddTheTeach" class="btn btn-link" title="View repository information." aria-label="View repository information." ng-click="repositories.getRepositoryDetails(repo, !repo.isExpanded);" ng-disabled="repo.detailsLoading || repo.cloneInProgress">
+                                <i ng-show="repo.detailsLoading" class="fas fa-spinner ng-hide" aria-hidden="true">
+                                </i>
+                                <i class="fas fa-chevron-right" ng-class="{ 'fa-chevron-right': !repo.isExpanded, 'fa-chevron-down': repo.isExpanded }" aria-hidden="true" ng-show="!repo.detailsLoading">
+                                </i>
+                            </button>
+
+                        </div>
+                        <span id="repoName_home_r1clkhqj64ol_repositories_ToddTheTeach" class="repository-name wordbreak" ng-bind="repo.name">ToddTheTeach</span>
+                    </td>
+                    <td class="hidden-xs">
+                        <span id="repoRoot_home_r1clkhqj64ol_repositories_ToddTheTeach" ng-bind="repo.repository_root" class="wordbreak display-inline-block">/home/r1clkhqj64ol/repositories/ToddTheTeach</span>
+                    </td>
+                    <td class="action-column" ng-class="{showDeleteMode:repo.delete_requested}">
+                        <button id="btnManage_home_r1clkhqj64ol_repositories_ToddTheTeach" class="btn btn-outline-primary btn-sm" title="Manage the repository settings." ng-click="repositories.manageRepository(repo.repository_root)" ng-disabled="repo.cloneInProgress">
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                            Manage
+                        </button>
+                        <button id="btnGitWebRedirect_home_r1clkhqj64ol_repositories_ToddTheTeach" class="btn btn-outline-primary btn-sm hidden-xs" title="View the repository history in Gitweb." ng-click="repositories.redirectToGitWeb(repo.gitWebURL, repo.name)" ng-disabled="repo.cloneInProgress">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            History
+                        </button>
+                        <button type="button" id="btnRepoDelete_home_r1clkhqj64ol_repositories_ToddTheTeach" class="btn btn-outline-primary btn-sm hidden-xs" title="Delete the repository." ng-click="repo.delete_requested = true" ng-disabled="repo.delete_requested || repo.cloneInProgress">
+                            <i class="fas fa-trash" aria-hidden="true"></i>
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+                <tr ng-repeat-end="" class="wordbreak" ng-class="{warning:repo.delete_requested, info:repo.cloneInProgress, success:repo.cloneState == 'complete'}">
+                    <td class="expand-panel-data" colspan="3">
+                        <!-- ngIf: repo.isExpanded -->
+                        <!-- ngIf: repo.delete_requested -->
+                        <!-- ngIf: repo.cloneInProgress -->
+                    </td>
+                </tr><!-- end ngRepeat: repo in repositories.filteredList track by repo.repository_root -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<script id="views/listProjectsView.ptt" type="text/ng-template">
+
+<callout callout-type="warning" ng-if="!repositories.hasShellAccess">
+    <strong>Warning:</strong> Your system administrator <strong>must</strong> enable shell access to allow you to view clone <abbr title="Uniform Resource Locators" class="initialism">URLs</abbr>.
+</callout>
+
+
+<div class="description">
+    Create and manage Git™ repositories. You can use Git to maintain any set of files and track the history of changes from multiple editors (version control). For more information, read our <a target="gitVersionControl" id="lnkGitVersionDocs" href="https://go.cpanel.net/GitVersionControl">documentation</a>.
+</div>
+
+<div id="tableShowHideContainer">
+    <div class="row action-row">
+        <div class="col-xs-12">
+            <div class="pull-right">
+                <button id="btnCreateRepositories"
+                    class="btn btn-primary alignment"
+                    type="button"
+                    ng-click="repositories.createRepository()"
+                    title="Create repository.">
+                    Create
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- search and pagination controls -->
+    <div id="paginationControls" class="row search-page-container">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <search id="filterRepoList"
+                ng-model="repositories.meta.searchText"
+                placeholder="Search"
+                autofocus
+                ng-change="repositories.searchList()">
+            </search>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div id="paginator" class="pagination-container pull-right flip hidden-xs hidden-sm">
+                <page-size id="topPageSize"
+                    allowed-sizes="repositories.meta.pageSizes"
+                    total-items="repositories.meta.totalItems"
+                    ng-model="repositories.meta.pageSize"
+                    show-all="false"
+                    ng-change="repositories.selectPageSize()">
+                </page-size>
+                <uib-pagination id="topPager"
+                    ng-change="repositories.selectPage()"
+                    ng-model="repositories.meta.pageNumber"
+                    max-size="0"
+                    items-per-page="repositories.meta.pageSize"
+                    total-items="repositories.meta.totalItems"
+                    direction-links="true"
+                    boundary-links="true"
+                    rotate="false"
+                    first-text="<<"
+                    last-text=">>"
+                    previous-text="<"
+                    next-text=">">
+                </uib-pagination>
+            </div>
+        </div>
+    </div>
+
+    <!-- table stats -->
+    <div id="tableStats" class="row hidden-xs hidden-sm">
+        <div class="col-xs-8">
+            <div class="page-stats selected-stats">
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div id="paginationMessage" class="page-stats pull-right flip">
+            {{repositories.paginationMessage()}}
+            </div>
+        </div>
+    </div>
+
+    <!-- table container -->
+    <div id="tableContainer">
+        <table id="table" class="table table-striped-child responsive-table">
+            <thead>
+                <tr>
+                    <th id="repoHeader">
+                        <span toggle-sort id="sortByRepo"
+                            onsort="repositories.sortList()"
+                            sort-meta="repositories.meta"
+                            sort-field="name">
+                            Repository
+                        </span>
+                    </th>
+                    <th id="remoteHeader" class="hidden-xs">
+                        <span toggle-sort id="sortByPath"
+                            onsort="repositories.sortList()"
+                            sort-meta="repositories.meta"
+                            sort-field="repository_root">
+                            Repository Path
+                        </span>
+                    </th>
+                    <th class="action-column">
+                        <!-- Place holder for create and bulk actions for later -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loading Message row -->
+                <tr id="loadingNotice"
+                    class="info empty-row ng-hide"
+                    ng-show="repositories.isLoading">
+                    <td colspan="3" id="loadingMessage">
+                        <i id="loadingSpinner" class="fas fa-spinner fa-spin"></i>
+                        Loading …
+                    </td>
+                </tr>
+
+                <!-- Empty Search Message row-->
+                <tr id="emptySearchListNotice"
+                    class="info empty-row ng-hide"
+                    ng-show="repositories.meta.searchText !== '' &&
+                        repositories.filteredList.length == 0 &&
+                        !repositories.isLoading &&
+                        !repositories.reloadRequired">
+                    <td colspan="3" id="emptySearchMessage">
+                        The system could not find any repositories that match your criteria. <a id="lnkSearchCreate" class="search-create-link" title="Create repository." href="#/create">Create</a>
+                    </td>
+                </tr>
+
+                <!-- Empty Message row-->
+                <tr id="emptyListNotice"
+                    class="info empty-row ng-hide"
+                    ng-show="repositories.filteredList.length == 0 &&
+                        !repositories.isLoading &&
+                        repositories.meta.searchText == '' &&
+                        !repositories.reloadRequired">
+                    <td colspan="3" id="emptyMessage">
+                        The system could not find any repositories. <a id="lnkEmptyCreate" class="search-create-link" title="Create repository." href="#/create">Create</a>
+                    </td>
+                </tr>
+
+                <!-- list repeater -->
+                <tr ng-repeat-start="repo in repositories.filteredList track by repo.repository_root"
+                    ng-show="!repositories.isLoading"
+                    ng-class="{warning:repo.delete_requested, info:repo.cloneInProgress, success:repo.cloneState == 'complete'}"
+                    data-testid="repoInfo_{{repo.qaSafeSuffix}}">
+                    <td>
+                        <div class="row-expand-container">
+                            <button id="lnkToggleViewRepoInfo_{{repo.qaSafeSuffix}}" class="btn btn-link"
+                                title="View repository information."
+                                aria-label="View repository information."
+                                ng-click="repositories.getRepositoryDetails(repo, !repo.isExpanded);"
+                                ng-disabled="repo.detailsLoading || repo.cloneInProgress"
+                                >
+                                <i ng-show="repo.detailsLoading"
+                                    class="fas fa-spinner"
+                                    aria-hidden="true">
+                                </i>
+                                <i class="fas"
+                                    ng-class="{ 'fa-chevron-right': !repo.isExpanded, 'fa-chevron-down': repo.isExpanded }"
+                                    aria-hidden="true"
+                                    ng-show="!repo.detailsLoading">
+                                </i>
+                            </button>
+
+                        </div>
+                        <span id="repoName_{{repo.qaSafeSuffix}}"
+                            class="repository-name wordbreak"
+                            ng-bind="repo.name">
+                        </span>
+                    </td>
+                    <td class="hidden-xs">
+                        <span id="repoRoot_{{repo.qaSafeSuffix}}"
+                            ng-bind="repo.repository_root" class="wordbreak display-inline-block">
+                        </span>
+                    </td>
+                    <td class="action-column"
+                        ng-class="{showDeleteMode:repo.delete_requested}">
+                        <button id="btnManage_{{repo.qaSafeSuffix}}"
+                            class="btn btn-outline-primary btn-sm"
+                            title="Manage the repository settings."
+                            ng-click="repositories.manageRepository(repo.repository_root)"
+                            ng-disabled="repo.cloneInProgress">
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                            Manage
+                        </button>
+                        <button id="btnGitWebRedirect_{{repo.qaSafeSuffix}}"
+                            class="btn btn-outline-primary btn-sm hidden-xs"
+                            title="View the repository history in Gitweb."
+                            ng-click="repositories.redirectToGitWeb(repo.gitWebURL, repo.name)"
+                            ng-disabled="repo.cloneInProgress">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            History
+                        </button>
+                        <button type="button" id="btnRepoDelete_{{repo.qaSafeSuffix}}"
+                            class="btn btn-outline-primary btn-sm hidden-xs"
+                            title="Delete the repository."
+                            ng-click="repo.delete_requested = true"
+                            ng-disabled="repo.delete_requested || repo.cloneInProgress">
+                            <i class="fas fa-trash" aria-hidden="true"></i>
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+                <tr ng-repeat-end=""
+                    class="wordbreak"
+                    ng-class="{warning:repo.delete_requested, info:repo.cloneInProgress, success:repo.cloneState == 'complete'}">
+                    <td class="expand-panel-data" colspan="3">
+                        <div class="vc-list-panel expand-panel"
+                            ng-if="repo.isExpanded">
+                            <div class="row">
+                                <div class="box col-xs-12 col-sm-6">
+                                    <div>
+                                        <label>Branch Information</label>
+                                    </div>
+                                    <div ng-show="repo.hasActiveBranch">
+                                        <code class="format">Checked-out Branch:</code>
+                                        <code id="activeBranch_{{repo.qaSafeSuffix}}" ng-bind="repo.activeBranch" class="wordbreak display-inline-block format">
+                                        </code>
+                                    </div>
+                                    <div ng-show="!repo.hasActiveBranch">
+                                        <callout id="noCommits_{{repo.qaSafeSuffix}}" class="branch-callout"
+                                            callout-type="information">
+                                            <p>No checked-out branch is available.</p>
+                                        </callout>
+                                    </div>
+                                    <div ng-show="repo.hasActiveBranch">
+                                        <div class="info-spacing">
+                                            <code class="format">Commit</code>
+                                            <code id="SHA_{{repo.qaSafeSuffix}}" ng-bind="repo.lastUpdateSHA" class="format"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code class="format">Author:</code>
+                                            <code id="author_{{repo.qaSafeSuffix}}" ng-bind="repo.author" class="format"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code class="format">Date:</code>
+                                            <code id="date_{{repo.qaSafeSuffix}}" ng-bind="repo.lastUpdateDate" class="format"></code>
+                                        </div>
+                                        <div class="info-spacking">
+                                            <code id="commitMessage_{{repo.qaSafeSuffix}}" ng-bind="repo.commitMessage" class="wordbreak commands format"></code>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box col-xs-12 col-sm-6">
+                                    <label>Repository Path</label>
+                                    <div id="repoRootExpanded_{{repo.qaSafeSuffix}}"
+                                        class="info-spacing"
+                                        ng-bind="repo.repository_root">
+                                    </div>
+                                    <button id="btnFileManagerRedirect_{{repo.qaSafeSuffix}}"
+                                            ng-show="repositories.hasFilemanagerAccess"
+                                            class="btn btn-outline-primary btn-sm"
+                                            title="View the repository in the File Manager interface."
+                                            ng-click="repositories.redirectToFileManager(repo.fileManagerRedirectURL, repo.name)">
+                                            <i class='fas fa-external-link-alt'></i>
+                                            File Manager
+                                    </button>
+                                </div>
+
+                                <div class="box col-xs-12 col-sm-6" ng-if="repo.cloneURL">
+                                    <label for="repoEditCloneUrl_{{repo.qaSafeSuffix}}">
+                                        Clone URL
+                                    </label>
+                                    <div class="input-group">
+                                        <input
+                                            name="repoEditCloneUrl"
+                                            id="repoEditCloneUrl_{{repo.qaSafeSuffix}}"
+                                            type="text"
+                                            class="form-control"
+                                            ng-value="repo.cloneURL"
+                                            ng-disabled="viewEditMode"
+                                            readonly />
+                                        <span class="input-group-btn">
+                                            <button type="button" id="cloneURLBtn_{{repo.qaSafeSuffix}}"
+                                                class="btn btn-default btn-default-white"
+                                                ng-click="repositories.cloneToClipboard(repo.cloneURL)"
+                                                title="Copy Clone URL to clipboard">
+                                                <i class="far fa-copy" aria-hidden="true"></i>
+                                                Copy
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="box col-xs-12 col-sm-6">
+                                    <label
+                                        class="visible-xs">
+                                        Actions
+                                    </label>
+                                    <div class="expand-actions">
+                                        <button id="btnMobileManage_{{repo.qaSafeSuffix}}"
+                                            class="btn btn-outline-primary btn-sm visible-xs-inline"
+                                            title="Manage the repository settings."
+                                            ng-click="repositories.manageRepository(repo.repository_root)">
+                                            <i class="fas fa-wrench" aria-hidden="true"></i>
+                                            Manage
+                                        </button>
+                                        <button id="btnMobileGitWebRedirect_{{repo.qaSafeSuffix}}"
+                                            class="btn btn-outline-primary btn-sm visible-xs-inline"
+                                            title="View the repository history in Gitweb."
+                                            ng-click="repositories.redirectToGitWeb(repo.gitWebURL, repo.name)">
+                                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                            History
+                                        </button>
+                                        <button type="button" id="btnMobileRepoDelete_{{repo.qaSafeSuffix}}"
+                                            class="btn btn-outline-primary btn-sm visible-xs-inline"
+                                            title="Delete the repository."
+                                            ng-click="repo.delete_requested = true"
+                                            ng-disabled="repo.delete_requested">
+                                            <i class="fas fa-trash" aria-hidden="true"></i>
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vc-list-panel"
+                            ng-if="repo.delete_requested">
+                            <div class="delete-warning">
+                                <div class="display-table">
+                                    <div class="display-table-cell">
+                                        <span class="delete-question-mark">?</span>
+                                    </div>
+                                    <div class="display-table-cell">
+                                        <div class="box">
+                                            <span class="delete-message wordbreak" ng-bind="repositories.deleteText(repo)"></span>
+                                            <p>
+                                                This action <strong>only</strong> removes the repository from the list of cPanel-managed repositories. The system will <strong>not</strong> delete the files. To completely delete the repository, manually delete the files after you remove it from the list.
+                                            </p>
+                                        </div>
+                                        <div class="box">
+                                            <button type="button" id="repoConfirmDelete_{{repo.qaSafeSuffix}}"
+                                                class="btn btn-primary btn-sm"
+                                                title="Remove the repository."
+                                                spinner-id="spinnerDelete_{{repo.qaSafeSuffix}}"
+                                                cp-action="repositories.delete(repo)">
+                                                <i class="fas fa-trash" aria-hidden="true"></i>
+                                                Remove
+                                            </button>
+                                            <button type="button" id="repoCancelDelete_{{repo.qaSafeSuffix}}"
+                                                class="btn btn-link"
+                                                title="Cancel."
+                                                ng-click="repo.delete_requested = false"
+                                                ng-disabled="repo.removing">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clone-in-progress" ng-if="repo.cloneInProgress">
+                            <span ng-switch="repo.cloneState">
+                                <span ng-switch-when="processing">
+                                    <i id="cloneInProgressSpinner_{{repo.qaSafeSuffix}}" class="fas fa-spinner fa-spin"></i> Clone is in progress …
+                                </span>
+                                <span ng-switch-when="complete">
+                                    <i id="cloneSuccessCheck_{{repo.qaSafeSuffix}}" class="far fa-check-circle"></i> Clone is complete
+                                </span>
+                                <span ng-switch-default>
+                                    <i id="cloneQueuedSpinner_{{repo.qaSafeSuffix}}" class="fas fa-spinner fa-spin"></i> Queued for cloning …
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</script>
+
+<script type="text/ng-template" id="repositoryPathSuggester.html">
+  <a>
+      <span ng-bind-html="match.label | encodeHtml | uibTypeaheadHighlight:query"></span>
+  </a>
+</script>
+
+<script id="views/createRepositoriesView.ptt" type="text/ng-template">
+<ol class="breadcrumb">
+    <li>
+        <a href="javascript:void(0);" ng-click="repository.backToListView()">
+            List Repositories
+        </a>
+    </li>
+    <li class="active">
+        Create Repository
+    </li>
+</ol>
+
+<div class="description">
+    Use this interface to create new repositories or clone existing remote repositories.
+    To add an existing repository to the list of cPanel-managed repositories, select that repository path when you create the repository.
+    The system will automatically add and configure the repository.
+    In order to clone private repositories, advanced users should preconfigure access.
+    For more information, read our <a target="gitVersionControlPrivateRepo" id="lnkGitVersionDocs" href="https://go.cpanel.net/PrivateRepositories">documentation</a>.
+</div>
+
+<form class="layout-medium" name="repository.createRepoForm"
+    ng-if="!repository.displaySuccessSummary">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <h4 class="section-heading">
+                        Create Repository
+                    </h4>
+                    <!--Creation Method Section-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label id="cloneRepositoryLabel" for="toggleCloneRepository">
+                                Clone a Repository
+                                </label>
+                                <toggle-switch id="toggleCloneRepository"
+                                   no-spinner="true"
+                                   no-label="1"
+                                   aria-label="Enabled"
+                                   on-toggle="repository.toggleStatus()"
+                                   ng-model="repository.formData.clone"
+                                   data-testid="cloneRepoToggle">
+                                </toggle-switch>
+                                <span class="info-block">
+                                Enable this toggle if you want to clone a remote repository, or disable this toggle to create a new repository.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Clone URL-->
+                    <div class="form-group" ng-if="repository.formData.clone">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <toggle-label-info
+                                     for="repoCloneURL"
+                                     label-text="Clone URL"
+                                     show-info-block="true">
+                                     Enter the clone URL for the remote repository.
+                                     All clone URLs must begin with the http://, https://, ssh://, or git:// protocols or begin with a username and domain.
+                                </toggle-label-info>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input
+                                    name="repoCloneURL"
+                                    id="repoCloneURL"
+                                    type="text"
+                                    class="form-control"
+                                    ng-disabled="!repository.formData.clone"
+                                    ng-model="repository.formData.cloneURL"
+                                    ng-model-options="{
+                                        updateOn: 'default change blur',
+                                        debounce: { 'default': 250, 'change': 0, 'blur': 0 },
+                                    }"
+                                    ng-change="repository.checkKnownHosts()"
+                                    ng-required="repository.formData.clone"
+                                    valid-clone-url
+                                    ng-blur="repository.autoFillPathAndName()"
+                                    auto-focus/>
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="col-xs-12">
+                                <ul validation-container field-name="repoCloneURL" role="alert">
+                                    <li validation-item field-name="repoCloneURL" validation-name="required">
+                                        You <strong>must</strong> enter a valid clone <abbr title="Uniform Resource Locator" class="initialism">URL</abbr>.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Deployment Path Section-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <toggle-label-info
+                                    id="repoPathFieldLabel"
+                                     for="repoPathField"
+                                     label-text="Repository Path"
+                                     show-info-block="true">
+                                     Enter the desired path for the repository’s directory.
+                                     If you enter a path that does not exist, the system will create the directory when it creates or clones the repository.
+                                </toggle-label-info>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="repoPathFieldSegment" class="col-xs-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon truncate">
+                                        <span ng-bind-html="repository.homeDirPath"
+                                            uib-tooltip="{{repository.homeDirPath}}"
+                                            class="home-dir-text">
+                                        </span>
+                                        <span class="sr-only">
+                                            Enter a valid directory path, relative to your home directory.
+                                        </span>
+                                    </span>
+                                    <input
+                                        id="repoPathField"
+                                        name="repoPathField"
+                                        type="text"
+                                        class="form-control"
+                                        ng-model="repository.formData.repoPath"
+                                        uib-typeahead="directory for directory in repository.completeDirectory($viewValue)"
+                                        typeahead-template-url="repositoryPathSuggester.html"
+                                        autocomplete="off"
+                                        required
+                                        valid-path
+                                        ng-trim="false"
+                                        ng-pattern="repository.pathExcludeList">
+                                </div>
+                                <span class="help-block">
+                                    The path cannot contain the “./” and “../” directory references, whitespace, or the following characters: \ * | " ' < > & @ ` $ { } [ ] ( ) ; ? : = % #
+                                </span>
+                            </div>
+                            <div class="col-xs-12">
+                                <ul validation-container field-name="repoPathField" role="alert">
+                                    <li validation-item field-name="repoPathField" validation-name="required">
+                                        You <strong>must</strong> enter a valid repository path.
+                                    </li>
+                                    <li validation-item field-name="repoPathField" validation-name="pattern">
+                                        You <strong>must</strong> specify a valid path.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Name Section-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <toggle-label-info
+                                     for="repoNameInput"
+                                     label-text="Repository Name"
+                                     show-info-block="true">
+                                     This name does <em>not</em> impact functionality, and instead functions <em>only</em> as a display name.
+                                </toggle-label-info>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input
+                                    name="repoNameInput"
+                                    id="repoNameInput"
+                                    type="text"
+                                    class="form-control"
+                                    ng-model="repository.formData.repoName"
+                                    ng-pattern="/^[^<>]+$/"
+                                    required>
+                                    <span class="help-block">The repository name may <strong>not</strong> include the “&lt;” and “&gt;” characters.</span>
+                            </div>
+                            <div class="col-xs-12">
+                                <ul validation-container field-name="repoNameInput" role="alert">
+                                    <li validation-item field-name="repoNameInput" validation-name="required">
+                                        You <strong>must</strong> enter a valid repository name.
+                                    </li>
+                                    <li validation-item field-name="repoNameInput" validation-name="pattern">
+                                        The repository name may <strong>not</strong> include the “&lt;” and “&gt;” characters.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <hr/>
+                    <!--Page Action Section-->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="checkbox create-another">
+                                    <label>
+                                        <input type="checkbox"
+                                            name="createAnother"
+                                            ng-model="repository.formData.createAnother">
+                                        <span>Create Another</span>
+                                    </label>
+                               </div>
+                                <div class="action-buttons">
+                                    <button id="btnSaveRepo"
+                                        type="button"
+                                        spinner-id="spinnerCreateRepoSave"
+                                        cp-action="repository.createRepository()"
+                                        ng-disabled="!repository.createRepoForm.$valid"
+                                        uib-tooltip="Create Repository">
+                                        Create
+                                    </button>
+                                    <button id="btnCancelCreateRepo"
+                                        type="button"
+                                        class="btn btn-link"
+                                        ng-click="repository.backToListView()"
+                                        uib-tooltip="Return to the repository list.">
+                                        Return to Repository List
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Related Links</h3>
+                </div>
+                <div class="list-group">
+                  <a href="../telnet/index.html"
+                     class="list-group-item list-group-item-action"
+                     uib-tooltip="Manage your SSH keys."
+                     target="SSHAccess">
+                     <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                     SSH Access
+                  </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</form>
+
+<div ng-if="repository.displaySuccessSummary">
+    <h2>
+        Run these commands on your local computer.
+    </h2>
+    <section class="summary-sections">
+        <h4 class="section-title">For an existing project …</h4>
+        <div class="steps">
+            <span class="step-title">Step 1:</span>
+            <span>Navigate to your repository’s directory:</span>
+<code class="commands wordbreak">
+cd /path/to/your/repo
+</code>
+        </div>
+        <div class="steps">
+            <span class="step-title">
+                Step 2:
+            </span>
+            <span>
+                Configure your local repository to push to the cPanel-hosted repository:
+            </span>
+<code ng-if="!repository.summary.readOnly" class="commands wordbreak">
+git remote add origin {{repository.summary.remoteURL}}
+git push -u origin master
+</code>
+
+<code ng-if="repository.summary.readOnly" class="commands wordbreak">
+git remote add origin {{repository.summary.remoteURL}}
+</code>
+        </div>
+    </section>
+    <hr/>
+    <section class="summary-sections">
+        <h4 class="section-title">To start a new project …</h4>
+        <div class="steps">
+            <span class="step-title">Step 1:</span>
+            <span>Clone the cPanel-hosted repository to your local computer and navigate to its directory:</span>
+<code ng-if="!repository.summary.readOnly" class="commands wordbreak">
+git clone {{repository.summary.remoteURL}}
+cd {{repository.summary.directoryName}}
+</code>
+<code ng-if="repository.summary.readOnly" class="commands wordbreak">
+git clone {{repository.summary.remoteURL}}
+cd {{repository.summary.directoryName}}
+</code>
+        </div>
+        <div class="steps">
+            <span class="step-title">Step 2:</span>
+            <span>Create a README file:</span>
+<code ng-if="!repository.summary.readOnly" class="commands wordbreak">
+echo "# README" >> README.md
+</code>
+<code ng-if="repository.summary.readOnly" class="commands wordbreak">
+echo "# README" >> README.md
+</code>
+        </div>
+        <div class="steps">
+            <span class="step-title">Step 3:</span>
+            <span>Commit the README file to the project:</span>
+<code ng-if="!repository.summary.readOnly" class="commands wordbreak">
+git add README.md
+git commit -m "Initial Commit"
+git push -u origin master
+</code>
+<code ng-if="repository.summary.readOnly" class="commands wordbreak">
+git add README.md
+git commit -m "Initial Commit"
+</code>
+        </div>
+   </section>
+    <hr/>
+     <button id="btnBackToList"
+        type="button"
+        class="btn btn-link"
+        ng-click="repository.backToListView()"
+        uib-tooltip="Return to the repository list.">
+        Return to Repository List
+    </button>
+</div>
+
+</script>
+
+<script id="views/manageRepositoriesView.ptt" type="text/ng-template">
+<ol class="breadcrumb">
+    <li>
+        <a href="javascript:void(0);" ng-click="repository.backToListView()">
+            List Repositories
+        </a>
+    </li>
+    <li class="active">
+        Manage Repository
+    </li>
+</ol>
+
+<uib-tabset active="activeTabIndex">
+    <uib-tab index="0" id="tabBasicInformation" heading="Basic Information" ng-click="changeActiveTab('basic-info')">
+        <div class="description">
+            Use this section of the interface to review repository information and configure settings and the currently checked-out branch.
+        </div>
+        <callout
+            class="no-connection-callout"
+            callout-type="warning"
+            ng-if="repository.unableToRetrieveAvailableBranches">
+            <p>
+                {{ repository._noConnectionText }}
+                Some actions are currently unavailable.
+            </p>
+
+            <button id="basic-info-try-again-button"
+                type="button"
+                spinner-id="basic-info-try-again-spinner"
+                cp-action="repository.tryAgain()"
+                uib-tooltip="{{ repository._tryAgainTooltipText }}">
+                Try Again
+            </button>
+        </callout>
+        <cp-loading-panel ng-show="repository.isLoading">
+            <span>Loading …</span>
+        </cp-loading-panel>
+        <div class="row" ng-show="!repository.isLoading">
+            <div class="col-xs-12 col-sm-6">
+                <section class="manage-section">
+                    <form name="repository.manageRepoForm">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <toggle-label-info
+                                        id="repoPathFieldLabel"
+                                            for="repoPathField"
+                                            label-text="Repository Path"
+                                            show-info-block="false">
+                                            The path for the repository’s directory.
+                                    </toggle-label-info>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="repoPathFieldSegment" class="col-xs-12">
+                                    <a  id="btnFileManagerRedirect_{{::repository.qaSafeSuffix}}"
+                                        class="external-link wordbreak"
+                                        title="View this repository in the File Manager interface."
+                                        ng-click="repository.redirectToFileManager(repository.fileManagerRedirectURL, repository.name)">
+                                        {{repository.fullRepoPath}}
+                                        <i class='fas fa-external-link-alt'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Name Section-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <toggle-label-info
+                                            for="repoNameInput"
+                                            label-text="Repository Name"
+                                            show-info-block="false">
+                                            This name does <em>not</em> impact functionality, and instead functions <em>only</em> as a display name.
+                                    </toggle-label-info>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <input
+                                        name="repoNameInput"
+                                        id="repoNameInput"
+                                        type="text"
+                                        class="form-control"
+                                        ng-model="repository.name"
+                                        ng-pattern="/^[^<>]+$/"
+                                        required
+                                        ng-readonly="repository.unableToRetrieveAvailableBranches"><!-- Read-only until we fix PH-9258 -->
+                                        <span class="help-block">The repository name may <strong>not</strong> include the “&lt;” and “&gt;” characters.</span>
+                                </div>
+                                <div class="col-xs-12">
+                                    <ul validation-container field-name="repoNameInput" role="alert">
+                                        <li validation-item field-name="repoNameInput" validation-name="required">
+                                            You <strong>must</strong> enter a valid repository name.
+                                        </li>
+                                        <li validation-item field-name="repoNameInput" validation-name="pattern">
+                                            The repository name may <strong>not</strong> include the “&lt;” and “&gt;” characters.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Branch Selection Section-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <toggle-label-info
+                                            for="repoBranchBranchField"
+                                            label-text="Checked-Out Branch">
+                                            The current locally checked-out branch. The system uses this branch when it pulls changes from a remote repository or deploys them.
+                                    </toggle-label-info>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                <!-- No branches available -->
+                                    <callout class="branch-callout"
+                                        callout-type="information"
+                                        ng-if="(!repository.branchList || repository.branchList.length == 0) && !repository.unableToRetrieveAvailableBranches">
+                                        <p>The system could not find any branches for this repository.</p>
+                                    </callout>
+                                <!-- Cannot read from remote repo -->
+                                    <callout class="branch-callout"
+                                        callout-type="warning"
+                                        ng-if="repository.unableToRetrieveAvailableBranches">
+                                        <p>The system could not retrieve the remote branches for this repository.</p>
+                                    </callout>
+                                <!-- more than one branch -->
+                                
+                                    <select width="'100%'"
+                                        class="form-control"
+                                        name="repoBranchBranchField"
+                                        id="repoBranchBranchField"
+                                        search_contains="true"
+                                        chosen
+                                        no-results-text="'No matches for'"
+                                        ng-class="{ 'chosen-rtl': repository.isRTL }"
+                                        ng-if="repository.branchList.length > 0"
+                                        ng-model="repository.branch"
+                                        ng-options="item as item for item in repository.branchList">
+                                    </select>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Page Action Section-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button id="btnSaveRepo"
+                                        type="button"
+                                        spinner-id="spinnerCreateRepoSave"
+                                        cp-action="repository.updateRepository()"
+                                        uib-tooltip="Update the repository’s settings."
+                                        ng-disabled="repository.unableToRetrieveAvailableBranches"><!-- Disabled until we fix PH-9258 -->
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div>
+                    <section class="manage-section">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>Currently Checked-Out Branch</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a id="btnBasicGitWebRedirect_{{::repository.qaSafeSuffix}}"
+                                        title="View the checked-out branch in Gitweb."
+                                        ng-click="repository.redirectToGitWeb(repository.gitWebURL, repository.name)"
+                                        ng-if="repository.hasActiveBranch"
+                                        class="external-link wordbreak">
+                                        {{repository.checkedoutBranch}}
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                    <callout class="branch-callout"
+                                        callout-type="information"
+                                        ng-if="!repository.hasActiveBranch"
+                                        <p>No checked-out branch is available.</p>
+                                    </callout>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="repository.hasHeadInformation">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>HEAD Commit</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="info-spacing">
+                                        <code class="format">Commit:</code>
+                                        <code id="basictab_lastUpdateSHA" class="format" ng-bind="repository.lastUpdateSHA"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code class="format">Author:</code>
+                                        <code id="basictab_lastUpdateAuthor" class="format" ng-bind="repository.author"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code class="format">Date:</code>
+                                        <code id="basictab_lastUpdateDate" class="format" ng-bind="repository.lastUpdateDate"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code id="basictab_lastUpdateCommitMessage" class="wordbreak commands format" ng-bind="repository.commitMessage"></code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a id="btnHistory_{{::repository.qaSafeSuffix}}"
+                            class="btn btn-outline-primary btn-sm"
+                            title="View the repository in Gitweb."
+                            ng-click="repository.redirectToGitWeb(repository.gitWebURL, repository.name)">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                            History
+                        </a>
+                    </section>
+                </div>
+                <section class="url-section">
+                    <div class="form-group" ng-if="repository.hasRemote">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <toggle-label-info
+                                    id="lblRepoRemoteUrl"
+                                    for="repoCloneURL"
+                                    label-text="Remote URL"
+                                    show-info-block="false">
+                                    The URL for the remote (cloned) repository.
+                                </toggle-label-info>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                               <span id="remoteURLInfo" ng-bind="repository.remoteInformation.url"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Clone URL-->
+                    <div class="form-group" ng-if="repository.cloneURL">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <toggle-label-info
+                                    id="lblRepoCloneUrl"
+                                    for="repoCloneURL"
+                                    label-text="Clone URL"
+                                    show-info-block="false">
+                                    Use this URL to clone the repository to another location.
+                                </toggle-label-info>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <span id="repoCloneURL"
+                                    class="wordbreak format"
+                                    ng-bind="repository.cloneURL">
+                                </span>
+                                <a id="cloneURLBtn_{{::repository.qaSafeSuffix}}"
+                                    class="btn btn-link"
+                                    ng-click="repository.cloneToClipboard(repository.cloneURL)"
+                                    title="Copy the repository’s clone URL to the clipboard.">
+                                    <i class="far fa-copy" aria-hidden="true"></i>
+                                    Copy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </uib-tab>
+    <uib-tab index="1" id="tabPullorDeploy" heading="Pull or Deploy" ng-click="changeActiveTab('deploy')">
+        <div class="description">
+            Use this section of the interface to deploy changes or pull them from remote repositories. For more information, read our <a target="gitdeployment" href="https://go.cpanel.net/GitDeployment">documentation</a>.
+        </div>
+        <callout
+            class="no-connection-callout"
+            callout-type="warning"
+            ng-if="repository.unableToRetrieveAvailableBranches">
+            <p>
+                {{ repository._noConnectionText }}
+                Some actions are currently unavailable.
+            </p>
+
+            <button id="pull-deploy-try-again-button"
+                type="button"
+                spinner-id="pull-deploy-try-again-spinner"
+                cp-action="repository.tryAgain()"
+                uib-tooltip="{{ repository._tryAgainTooltipText }}">
+                Try Again
+            </button>
+        </callout>
+        <cp-loading-panel ng-show="repository.isLoading">
+            <span>Loading …</span>
+        </cp-loading-panel>
+        <div class="row" ng-show="!repository.isLoading">
+            <div class="col-xs-12 col-sm-6">
+                <!--Repository Info Panel-->
+                <div id="repoInfoPanel">
+                    <section class="manage-section">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <toggle-label-info
+                                        id="deployViewRepoPathFieldLabel"
+                                        for="repoPathField"
+                                        label-text="Repository Path"
+                                        show-info-block="false">
+                                        The path for the repository’s directory.
+                                    </toggle-label-info>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="deployViewRepoPathFieldSegment" class="col-xs-12">
+                                    <a  id="deployViewBtnFileManagerRedirect_{{::repository.qaSafeSuffix}}"
+                                        title="View the repository in the File Manager interface."
+                                        ng-click="repository.redirectToFileManager(repository.fileManagerRedirectURL, repository.name)"
+                                        class="external-link wordbreak">
+                                        {{repository.fullRepoPath}}
+                                        <i class='fas fa-external-link-alt'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="repository.hasRemote">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="repoRemoteUrl">
+                                        Remote URL
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                <span ng-bind="repository.remoteInformation.url"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="repository.hasActiveBranch">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>Currently Checked-Out Branch</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a id="btnDeployGitWebRedirect_{{::repository.qaSafeSuffix}}"
+                                        title="View the checked-out branch in Gitweb."
+                                        ng-click="repository.redirectToGitWeb(repository.gitWebURL, repository.name)"
+                                        ng-if="repository.hasActiveBranch"
+                                        class="external-link wordbreak">
+                                        {{repository.checkedoutBranch}}
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="manage-section">
+                        <div class="form-group" ng-if="repository.hasHeadInformation">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>HEAD Commit</label>
+                                    <span class="label label-info" ng-if="repository.newCommits">New</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12" ng-class="{ 'commit-changed' : repository.newCommits }">
+                                    <div class="info-spacing">
+                                        <code class="format">Commit:</code>
+                                        <code id="pulldeploytab_lastUpdateSHA" class="format" ng-bind="repository.lastUpdateSHA"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code class="format">Author:</code>
+                                        <code id="pulldeploytab_lastUpdateAuthor" class="format" ng-bind="repository.author"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code class="format">Date:</code>
+                                        <code id="pulldeploytab_lastUpdateDate" class="format" ng-bind="repository.lastUpdateDate"></code>
+                                    </div>
+                                    <div class="info-spacing">
+                                        <code id="pulldeploytab_lastUpdateCommitMessage" class="wordbreak commands format" ng-bind="repository.commitMessage"></code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-if="repository.changesAvailableToDeploy && repository.deployable">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <callout class="branch-callout"
+                                        callout-type="information">
+                                        <p>
+                                            <i class="fas fa-lg fa-bell"></i>
+                                            The checked-out branch includes new deployable changes.
+                                        </p>
+                                    </callout>
+                                </div>
+                            </div>
+                        </div>
+                        <!--No Deployment State / no .yml file-->
+                        <div class="form-group" ng-if="!repository.deployable">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <callout class="branch-callout"
+                                        callout-type="information"
+                                        callout-heading="The system cannot deploy">
+                                        <p>
+                                            For deployment, ensure that your repository meets the following requirements:
+                                            <ol>
+                                                <li ng-if="!repository.hasActiveBranch">A checked-out branch or working tree exists.</li>
+                                                <li>A valid .cpanel.yml file exists. For more information, read our <a target="gitdeployment" href="https://go.cpanel.net/GitDeployment">documentation</a>.</li>
+                                                <li>No uncommitted changes exist on the checked-out branch.
+                                            </ol>
+                                        </p>
+                                    </callout>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button id="btnUpdateFromRemote"
+                                        type="button"
+                                        spinner-id="spinnerUpdateFromRemote"
+                                        cp-action="repository.pullFromRemote()"
+                                        button-class="btn-outline-primary"
+                                        title="Pull changes from the remote repository."
+                                        ng-disabled="repository.unableToRetrieveAvailableBranches"
+                                        ng-if="repository.hasRemote">
+                                        <i class='fas fa-cloud-download-alt'></i>
+                                        Update from Remote
+                                    </button>
+                                    <button id="btnDeployRepository"
+                                        type="button"
+                                        spinner-id="spinnerDeployRepository"
+                                        cp-action="repository.deployRepository()"
+                                        button-class="btn btn-primary"
+                                        title="Run the configured tasks to deploy your repository."
+                                        ng-disabled="!repository.deployable || repository.deployInProgress"
+                                        action-active="{{repository.deployInProgress}}">
+                                        <i class="fas fa-angle-double-up"></i>
+                                        Deploy HEAD Commit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <!--Deployment Panel-->
+                <div id="deploymentPanel">
+                    <section class="manage-section">
+                        <!--Last Deployment Section-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-12" ng-class="{ 'commit-changed' : repository.newDeployCommit }">
+                                    <label>
+                                        Last Deployment Information
+                                        <span class="label label-info" ng-if="repository.newDeployCommit">New</span>
+                                    </label>
+                                    <div ng-if="!repository.hasDeploymentInformation">
+                                        <callout class="branch-callout"
+                                            callout-type="information">
+                                            <p>Information about the most recent deployment is unavailable.</p>
+                                        </callout>
+                                    </div>
+                                    <div ng-if="repository.hasDeploymentInformation">
+                                        <div class="info-spacing">
+                                            <code class="format">Last Deployed on:</code>
+                                            <code id="pulldeploytab_lastDeployedDate" class="format font-weight-bold" ng-bind="repository.lastDeployedDate"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code class="format">Last Deployed SHA:</code>
+                                            <code id="pulldeploytab_lastDeployedSHA" class="format" ng-bind="repository.lastDeployedSHA"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code class="format">Author:</code>
+                                            <code id="pulldeploytab_lastDeployedAuthor" class="format" ng-bind="repository.lastDeployedAuthor"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code class="format">Commit Date:</code>
+                                            <code id="pulldeploytab_lastDeployedCommitDate" class="format" ng-bind="repository.lastDeployedCommitDate"></code>
+                                        </div>
+                                        <div class="info-spacing">
+                                            <code id="pulldeploytab_lastDeployedCommitMessage" class="wordbreak commands format" ng-bind="repository.lastDeployedCommitMessage"></code>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row" ng-if="repository.deployInProgress">
+                                <div class="col-xs-12">
+                                    <div class="callout callout-{{repository.deployCalloutType}}">
+                                        <div ng-switch="repository.deployState">
+                                            <span ng-switch-when="processing">
+                                                <i id="deployInProgressSpinner" class="fas fa-spinner fa-spin"></i>
+                                                {{repository.deployProgress}}
+                                            </span>
+                                            <span ng-switch-when="complete">
+                                                <i id="deploySuccessCheck" class="far fa-check-circle"></i>
+                                                {{repository.deployComplete}}
+                                            </span>
+                                            <span ng-switch-default>
+                                                <i id="deployQueuedSpinner" class="fas fa-spinner fa-spin"></i>
+                                                {{repository.deployQueued}}
+                                            </span>
+                                        </div>
+                                        <div class="badge badge-info margin-top-10" ng-if="repository.queuedDeployTasksCount > 0">
+                                            {{repository.queuedTaskString}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </uib-tab>
+</uib-tabset>
+
+<div class="row">
+    <div class="col-xs-12">
+        <button id="btnCancelUpdateRepo"
+            type="button"
+            class="btn btn-link"
+            ng-click="repository.backToListView()"
+            uib-tooltip="Return to the repository list.">
+            Return to Repository List
+        </button>
+    </div>
+</div>
+
+
+</script>
+
+<script id="views/sshKeyVerification.ptt" type="text/ng-template">
+<div id="ssh-identity" class="panel ssh-identity-panel" ng-class="{ 'panel-warning': modal.keyIsNew(), 'panel-danger': modal.keyIsChanged() }">
+    <div class="panel-heading">
+        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+        <label ng-if="modal.keyIsNew()">Unknown SSH Host</label>
+        <label ng-if="modal.keyIsChanged()">SSH Host Key Verification Failed</label>
+    </div>
+    <div class="panel-body">
+        <div ng-if="modal.keyIsNew()">
+            <p>
+                <span ng-bind-html="modal.newKeyIntro()"></span>
+            </p>
+            <p>
+                <span>To ensure a secure connection, you must verify, trust, and save the host’s identity.</span>
+                <span>For more information, read our <a target="gitVersionControl" id="lnkGitVersionDocs-keyModal" href="https://go.cpanel.net/GitVersionControl">documentation</a>.</span>
+            </p>
+        </div>
+        <div ng-if="modal.keyIsChanged()">
+            <p>
+                <span ng-bind-html="modal.changedKeyIntro()"></span>
+            </p>
+            <p>
+                <span>This change may be legitimate, or you may be the target of a man-in-the-middle attack.</span>
+            </p>
+            <p>
+                <span>To ensure a secure connection, you must verify, trust, and save the host’s identity.</span>
+                <span>For more information, read our <a target="gitVersionControl" id="lnkGitVersionDocs-keyModal" href="https://go.cpanel.net/GitVersionControl">documentation</a>.</span>
+            </p>
+        </div>
+        <button id="ssh-identity-details-expander" class="btn btn-default btn-xs" ng-click="modal.sshDetailsAreExpanded = !modal.sshDetailsAreExpanded">
+            <i class="fas fa-fw fa-key" aria-hidden=true></i>
+            <span ng-if="!modal.sshDetailsAreExpanded">View Host Identification Information</span>
+            <span ng-if="modal.sshDetailsAreExpanded">Hide Host Identification Information</span>
+            <i class="fas fa-fw fa-caret-down" ng-class="{ 'fa-rotate-180': modal.sshDetailsAreExpanded }" title="Toggle host details."></i>
+        </button>
+        <div id="ssh-identity-details-body" uib-collapse="!modal.sshDetailsAreExpanded">
+            <pre ng-repeat="hostKey in modal.keys" class="wordbreak">
+                <dl>
+                    <dt>Algorithm:</dt>
+                    <dd>{{ hostKey.meta.algorithm }}</dd>
+                    <dt>Fingerprints:</dt>
+                    <dd>{{ hostKey.meta['sha256-printable'] }}</dd>
+                    <dd>{{ hostKey.meta['md5-printable'] }}</dd>
+                </dl>
+            </pre>
+        </div>
+    </div>
+    <div class="panel-footer clearfix">
+        <button id="ssh-identity-action-accept" button-class="pull-right flip" button-ng-class="{ 'btn-warning': modal.keyIsNew(), 'btn-danger': modal.keyIsChanged() }" cp-action="modal.acceptIdentity()">Save and Continue</button>
+        <button id="ssh-identity-action-cancel" class="btn btn-link pull-right flip" ng-click="modal.rejectIdentity()">Cancel</button>
+    </div>
+</div>
+
+</script>
+
+
+
+
+<script>
+/**
+ * Helper method to extend any existing PAGE object with the standard props.
+ * Needed before we load dependencies so it's used in an IIFE here.
+ * @param  {Object} destination Object to extend
+ * @param  {Object} source      New methods and properties to add
+ * @return {Object}             Extended object. To make chaining easier.
+ */
+var PAGE = (function(destination, source) {
+    for (var k in source) {
+        if (source.hasOwnProperty(k)) {
+            destination[k] = source[k];
+        }
+    }
+    return destination;
+})(PAGE || {}, {
+    THEME_PATH : "\/frontend\/jupiter",
+    masterPath : "_assets",
+    IS_PROXY: false,
+    APP_NAME: "cpanel",
+    CJT2_ANGULAR_MODULE_NAME: "cjt2.cpanel",
+    CJT2_MODULES_DEPENDENCY_PATH: "cjt\/modules.cpanel",
+    IS_E2E: false,
+    APP_PATH: "version_control",
+    MODE: "release",
+    CACHE_BUST: false,
+    OPTIMIZED: true,
+    currentLocale: "en",
+    MAGIC: "\/",
+    BUILDREVISION: "1773095927",
+    LOCALEREVISION: "1773096564"
+});
+
+/*
+# cpanel - share/libraries/cjt2/src/config.debug.js
+#                                                  Copyright 2022 cPanel, L.L.C.
+#                                                           All rights reserved.
+# copyright@cpanel.net                                         http://cpanel.net
+# This code is subject to the cPanel license. Unauthorized copying is prohibited
+*/
+
+/* WARNING -- removed: `PAGE: false` per cplint. No idea what this may impact! */
+/* global module: false, global: true  */
+/* exported require */
+
+/**
+ * Release Configuration
+ */
+
+(function() {
+    "use strict";
+
+    var require = (function() {
+
+        /**
+         * Trim trailing slashes to prevent // in paths.
+         * @param  {String} url Url to process.
+         * @return {String} Cleaned up url.
+         */
+        function trimTrailingSlash(url) {
+            if (url) {
+                return url.replace(/\/$/, "");
+            }
+            return url;
+        }
+
+        /**
+         * Trim leading slashes to prevent // in paths.
+         * @param  {String} url Url to process.
+         * @return {String} Cleaned up url.
+         */
+        function trimLeadingSlash(url) {
+            if (url) {
+                return url.replace(/^\//, "");
+            }
+            return url;
+        }
+
+        var preamble, root, libRoot, shareRoot,
+            isCjtBuild, includeApp,
+            currentLocale,
+            appPath, masterPath,
+            localeRevision,
+            appName;
+
+        var isBrowser = typeof (window) !== "undefined";
+        if (isBrowser) {
+
+            // Gets the session token from the url
+            var url = window.location.href.toString();
+            var parts = url.split("/");
+            var session = parts[3];
+            if (session.indexOf("cpsess") !== 0) {
+                session = "";
+            }
+
+            // Build the cleaned up paths
+            preamble = parts.slice(0, 6).join("/");
+
+            root = trimTrailingSlash(PAGE.THEME_PATH || "");
+            root = trimTrailingSlash(PAGE.MAGIC) + root;
+            root = trimTrailingSlash(root);
+
+            libRoot = root + "/libraries";
+            shareRoot = root + "/shared";
+            PAGE.APP_PATH = trimLeadingSlash(trimTrailingSlash(PAGE.APP_PATH));
+            isCjtBuild = false;
+            includeApp = true;
+            currentLocale = PAGE.currentLocale;
+            appPath = PAGE.APP_PATH;
+            masterPath = PAGE.masterPath;
+            localeRevision = PAGE.LOCALEREVISION;
+            appName = PAGE.APP_NAME;
+        } else {
+            preamble = global.BUILD_BASE;
+            root = global.BUILD_ROOT;
+            libRoot = global.BUILD_ROOT;
+            shareRoot = global.BUILD_ROOT + "/..";
+            isCjtBuild = global.BUILD_CJT;
+            includeApp = global.INCLUDE_APP;
+            currentLocale = "en";
+            appPath = "";
+            masterPath = "";
+            localeRevision = 0;
+            appName = global.APP_NAME;
+        }
+
+        var JAVASCRIPT_FILE_PATTERN = /\.js$/;
+        var INTERNAL_IGNORE_PATTERN = /^_@/;
+        var LIBRARY_IGNORE_PATTERN = /\/libraries\//;
+
+        /**
+         * Helper method that will flag if the file is in a legacy minified folder. Legacy
+         * minified files are generated by the cpanel minifier, not r.js.
+         *
+         * @method hasMinFile
+         * @private
+         * @param  {String}  url Url requested by requirejs.
+         * @return {Boolean}     true if the file should have a legacy .min file, false otherwise.
+         */
+        var hasMinFile = function(url) {
+            return !INTERNAL_IGNORE_PATTERN.test(url) && // Ignore require js internal urls.
+                !LIBRARY_IGNORE_PATTERN.test(url); // Ignore things in the library folder since they are statically mapped below
+        };
+
+        var isCombinedLocale = function(url) {
+            return (/\.cmb-.*\.js/).test(url);
+        };
+
+        /**
+         * Helper to apply the .min extension to the appropriate .js urls.
+         *
+         * @method applyDotMinToUrl
+         * @private
+         * @param  {String} url    Url require js build from the module name.
+         * @param  {String} module Module name passed to requirejs
+         * @return {String}        New url.
+         */
+        var applyDotMinToUrl = function(url, module) {
+            if (isCombinedLocale(url)) {
+                return url;
+            }
+            if (hasMinFile(url)) {
+                url = url.replace(JAVASCRIPT_FILE_PATTERN, ".min.js");
+                if (url.indexOf("locale=") === -1) {
+                    url += url.indexOf("?") > -1 ? "&" : "?";
+                    url += "locale_optional=1&locale=" + currentLocale + "&locale_revision=" + localeRevision;
+                }
+            }
+            return url;
+        };
+
+        /**
+         * Calculate the correct path for the application's cjt2 bundle
+         *
+         * @method calculateAppBundlePath
+         * @param {String} appName
+         * @return {String} library relative path to the bundle.
+         */
+        var calculateAppBundlePath = function(appName) {
+            switch (appName) {
+                case "cpanel":
+                    return "/cjt2-dist/cjt2.cpanel.cmb.min";
+                case "whostmgr":
+                    return "/cjt2-dist/cjt2.whm.cmb.min";
+                case "webmail":
+                    return "/cjt2-dist/cjt2.webmail.cmb.min";
+                case "unprotected":
+                    return "/cjt2-dist/cjt2.unprotected.cmb.min";
+                default:
+                    return "/cjt2-dist/cjt2.whm.cmb.min";
+            }
+        };
+
+        if (isBrowser && PAGE.BUILDREVISION) {
+            root = "/cPanel_magic_revision_" + PAGE.BUILDREVISION + root;
+            libRoot = "/cPanel_magic_revision_" + PAGE.BUILDREVISION + libRoot;
+            shareRoot = "/cPanel_magic_revision_" + PAGE.BUILDREVISION + shareRoot;
+        }
+
+        var paths = {
+            root: root,
+            lib: libRoot,
+            shared: shareRoot,
+
+            // Setup the common modules
+            cjtBuild: libRoot + calculateAppBundlePath(appName),
+            frameworksBuild: libRoot + "/cjt2-dist/frameworks.cmb",
+
+            // AMD Plugins
+            text: libRoot + "/requirejs/plugins/text_2.0.12/text.min",
+            locale: libRoot + "/cjt2-dist/plugins/locale",
+
+            // Application Support Libraries
+            bootstrap: libRoot + "/bootstrap/optimized/js/bootstrap.min",
+            jquery: libRoot + "/jquery/current/jquery.min",
+            lodash: libRoot + "/lodash/4.8.2/lodash.min",
+            "lz-string": libRoot + "/lz-string/1.5.0/lz-string.min",
+            moment: libRoot + "/moment/optimized/moment-with-locales.min",
+            qrcode: libRoot + "/qrcodejs/0.0.1/qrcode.min",
+
+            // Angular specific libraries
+            angular: libRoot + "/angularjs/1.4.4/angular.min",
+            ngRoute: libRoot + "/angularjs/1.4.4/angular-route.min",
+            ngAnimate: libRoot + "/angularjs/1.4.4/angular-animate.min",
+            ngSanitize: libRoot + "/angularjs/1.4.4/angular-sanitize.min",
+            ngAria: libRoot + "/angularjs/1.4.4/angular-aria.min",
+            uiBootstrap: libRoot + "/angular-ui-bootstrap/optimized/ui-bootstrap-tpls-1.2.5.min",
+            "angular-growl": libRoot + "/angular-growl-2/build/angular-growl.min",
+
+            // Other libraries
+            handlebars: libRoot + "/handlebars/handlebars.min",
+            "jquery-chosen": libRoot + "/chosen/1.5.1/chosen.jquery.min",
+            "angular-chosen": libRoot + "/angular-chosen/1.4.0/dist/angular-chosen.min",
+            "angular-ui-scroll": libRoot + "/angular-ui-scroll/1.6.1/dist/ui-scroll.min",
+            "angular-ui-scroll-grid": libRoot + "/angular-ui-scroll/1.6.1/dist/ui-scroll-grid.min",
+            "angular-ui-scroll-jqlite": libRoot + "/angular-ui-scroll/1.6.1/dist/ui-scroll-jqlite.min",
+            ace: libRoot + "/ace-editor/optimized/src-min-noconflict/ace",
+            "xterm": libRoot + "/xtermjs/xterm.min",
+            "xterm/addons/fit/fit": libRoot + "/xtermjs/addons/fit/fit.min",
+            punycode: libRoot + "/punycodejs/punycode.min",
+        };
+
+
+        // Application Paths
+        if (includeApp) {
+            paths["app"] = root + "/" + appPath;
+        }
+
+        if (!isCjtBuild) {
+            paths["cjt"] = libRoot + "/cjt2";
+        } else {
+            paths["cjt"] = "../src";
+        }
+
+        if (masterPath) {
+            paths["master"] = root + "/" + masterPath;
+        }
+
+
+        var config = {
+
+            // By default load any module IDs from js/lib
+            baseUrl: preamble,
+
+            // except, if the module ID starts with "app",
+            // load it from the js/app directory. paths
+            // config is relative to the baseUrl, and
+            // never includes a ".js" extension since
+            // the paths config could be for a directory.
+            paths: paths,
+
+            locale: {
+                currentLocale: currentLocale,
+                addMin: true,
+                revision: localeRevision
+            },
+
+            transformUrl: applyDotMinToUrl,
+
+            shim: {
+                "lodash": {
+                    exports: "_"
+                },
+                "angular": {
+                    exports: "angular",
+                    deps: ["jquery"]
+                },
+                "ngRoute": {
+                    deps: ["angular"]
+                },
+                "ngAnimate": {
+                    deps: ["angular"]
+                },
+                "ngSanitize": {
+                    deps: ["angular"]
+                },
+                "ngAria": {
+                    deps: ["angular"]
+                },
+                "uiBootstrap": {
+                    deps: ["angular"]
+                },
+                "angular-growl": {
+                    deps: ["angular"]
+                },
+                "bootstrap": {
+                    deps: ["jquery"]
+                },
+                "qrcode": {
+                    exports: "QRCode"
+                },
+                "lz-string": {
+                    exports: "LZString"
+                },
+                "jquery-chosen": {
+                    deps: ["jquery"]
+                },
+                "angular-chosen": {
+                    deps: ["angular", "jquery", "jquery-chosen"]
+                },
+                "angular-ui-scroll": {
+                    deps: ["angular", "jquery"]
+                },
+                "angular-ui-scroll-jqlite": {
+                    deps: ["angular"]
+                },
+                "angular-ui-scroll-grid": {
+                    deps: ["angular", "angular-ui-scroll"]
+                },
+                "handlebars": {
+                    exports: "Handlebars"
+                }
+            },
+
+            // disable requireJS timeout to allow for low bandwidth situations
+            waitSeconds: 0
+        };
+
+        return config;
+    })();
+
+
+    if (typeof (module) !== "undefined" && module.exports) {
+
+        // We are in the build environment, so export it via exports
+        module.exports.config = require;
+    } else {
+
+        // This is runtime so make it a global
+        window.require = require;
+    }
+})();
+// Polyfill for Internet Explorer:
+// https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
+(function() {
+
+    "use strict";
+
+    if ( typeof window.CustomEvent === "function" ) {
+        return false;
+    }
+
+    function CustomEvent( event, params ) {
+        params = params || { bubbles: false, cancelable: false, detail: undefined };
+        var evt = document.createEvent( "CustomEvent" );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+    }
+
+    CustomEvent.prototype = window.Event.prototype;
+
+    window.CustomEvent = CustomEvent;
+})();
+
+
+    window.__cjt2__requirejsLoaded = function __cjt2__requirejsLoaded() { // eslint-disable-line camelcase
+        var event = new CustomEvent("library-loaded", {
+            detail: {
+                library: "requirejs"
+            }
+        });
+        window.dispatchEvent(event);
+    };
+</script>
+
+<script defer="" data-main="app/index.dist" src="/cPanel_magic_revision_1660073133/frontend/jupiter/libraries/requirejs/optimized/require.min.js" onload="window.__cjt2__requirejsLoaded();">
+</script>
+
+
+
+
+
+                        <!-- PAGE TEMPLATE'S CONTENT END -->
+            
+            </div>
+        </div>
+
+        
+
+        <footer class="cp-layout-footer" role="contentinfo">
+            <!-- Content Include point: APP Footer Include -->
+            
+            <!-- End: Content Include point -->
+
+            <!-- Content Include point: GLOBAL <html><body><footer> content -->
+            
+            <!-- End: Content Include point -->
+
+            <cp-footer id="cp-footer" directory-prefix="../" version="126.0.47" logo-src="/cPanel_magic_revision_1705006209/frontend/jupiter/brand/cpanel-logo-orange.svg" doc-link="https://go.cpanel.net/cpaneldocsHome">
+            </cp-footer>
+        </footer>
+
+        <!-- Content Include point: GLOBAL <html><body> after <footer> content -->
+        
+        <!-- End: Content Include point -->
+    </div>
+</div>
+
+
+        
+        
+        <script>
+        window.LEXICON = window.LEXICON || {};
+        //-------------------------------------------------------------
+// CLDR Data for en
+//-------------------------------------------------------------
+(function(context) {
+    var locale = "en",
+        functions = {'get_plural_form':function(n){var category;var category_values=Array.prototype.slice.call(arguments,1);var has_extra_for_zero=0;var abs_n=Math.abs(n);var category_process_order=["zero","one","two","few","many","other"];var category_rules_lookup={"one":function(n){if(((n==1))){return'one';}return;}};for(i=0;i<category_process_order.length;i++){if(category_rules_lookup[category_process_order[i]]){category=category_rules_lookup[category_process_order[i]](abs_n);if(category)break;}}
+var categories=["one","other"];if(category_values.length===0){category_values=categories;}
+else{var cat_len=categories.length;var val_len=category_values.length;var cat_len_plus_one=cat_len+1;if(val_len===cat_len_plus_one){has_extra_for_zero++;}
+else if(cat_len!==val_len){if(window.console)console.warn('The number of given values ('+val_len+') does not match the number of categories ('+cat_len+').');}}
+if(category===undefined){var cat_idx=has_extra_for_zero&&abs_n!==0?-2:-1;var sliced=category_values.slice(cat_idx);return[sliced[0],has_extra_for_zero&&abs_n===0?1:0];}
+else{var return_value;GET_POSITION:while(1){var cat_pos_in_list;var index=-1;CATEGORY:for(i=0;i<categories.length;i++){index++;if(categories[i]===category){cat_pos_in_list=index;break CATEGORY;}}
+if(cat_pos_in_list===undefined&&category!=='other'){if(window.console)console.warn('The category ('+category+') is not used by this locale.');category='other';continue GET_POSITION;}
+else if(cat_pos_in_list===undefined){var cat_idx=has_extra_for_zero&&abs_n!==0?-2:-1;var sliced=category_values.slice(cat_idx);return_value=[sliced[0],has_extra_for_zero&&abs_n===0?1:0]
+break GET_POSITION;}
+else{if(has_extra_for_zero&&category==='other'){var cat_idx=has_extra_for_zero&&abs_n===0?-1:cat_pos_in_list;var sliced=category_values.slice(cat_idx);return_value=[sliced[0],has_extra_for_zero&&abs_n===0?1:0];break GET_POSITION;}
+else{return_value=[category_values[cat_pos_in_list],0];break GET_POSITION;}}
+break GET_POSITION;}
+return return_value;}}},
+        datetime_info = {"territory":null,"quarter_stand_alone_narrow":["1","2","3","4"],"time_formats":{"short":"h:mm a","medium":"h:mm:ss a","long":"h:mm:ss a z","full":"h:mm:ss a zzzz"},"era_narrow":["B","A"],"datetime_format_full":"EEEE, MMMM d, y h:mm:ss a zzzz","glibc_date_1_format":"%a %b %e %H:%M:%S %Z %Y","datetime_format_long":"MMMM d, y h:mm:ss a z","date_format_short":"M/d/yy","native_variant":null,"name":"English","language_id":"en","era_wide":["Before Christ","Anno Domini"],"variant_id":null,"date_format_medium":"MMM d, y","time_format_default":"h:mm:ss a","era_abbreviated":["BC","AD"],"datetime_format":"{1} {0}","month_format_wide":["January","February","March","April","May","June","July","August","September","October","November","December"],"quarter_format_abbreviated":["Q1","Q2","Q3","Q4"],"datetime_format_short":"M/d/yy h:mm a","glibc_datetime_format":"%a %b %e %H:%M:%S %Y","quarter_stand_alone_abbreviated":["Q1","Q2","Q3","Q4"],"script_id":null,"prefers_24_hour_time":0,"cldr_version":"1.7.1","day_format_wide":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"language":"English","month_format_narrow":["J","F","M","A","M","J","J","A","S","O","N","D"],"time_format_full":"h:mm:ss a zzzz","date_format_default":"MMM d, y","am_pm_abbreviated":["AM","PM"],"native_territory":null,"glibc_time_12_format":"%I:%M:%S %p","month_stand_alone_wide":["January","February","March","April","May","June","July","August","September","October","November","December"],"time_format_long":"h:mm:ss a z","day_stand_alone_wide":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"variant":null,"id":"en","available_formats":null,"quarter_stand_alone_wide":["1st quarter","2nd quarter","3rd quarter","4th quarter"],"time_format_medium":"h:mm:ss a","time_format_short":"h:mm a","date_format_full":"EEEE, MMMM d, y","territory_id":null,"first_day_of_week":"1","glibc_date_format":"%m/%d/%y","quarter_format_wide":["1st quarter","2nd quarter","3rd quarter","4th quarter"],"day_stand_alone_abbreviated":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"month_stand_alone_narrow":["J","F","M","A","M","J","J","A","S","O","N","D"],"format_for":{"yQQQ":"QQQ y","yMMMEd":"EEE, MMM d, y","d":"d","y":"y","hms":"h:mm:ss a","MMMMd":"MMMM d","yMMMM":"MMMM y","ms":"mm:ss","M":"L","yM":"M/yyyy","MEd":"E, M/d","MMM":"LLL","Md":"M/d","yQ":"Q yyyy","yMEd":"EEE, M/d/yyyy","Hm":"H:mm","EEEd":"d EEE","Hms":"H:mm:ss","hm":"h:mm a","MMMEd":"E, MMM d","MMMMEd":"E, MMMM d","MMMd":"MMM d","yMMM":"MMM y"},"quarter_format_narrow":["1","2","3","4"],"date_formats":{"short":"M/d/yy","medium":"MMM d, y","long":"MMMM d, y","full":"EEEE, MMMM d, y"},"date_format_long":"MMMM d, y","month_stand_alone_abbreviated":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"native_language":"English","datetime_format_default":"MMM d, y h:mm:ss a","native_name":"English","day_format_narrow":["M","T","W","T","F","S","S"],"script":null,"default_time_format_length":"medium","glibc_time_format":"%H:%M:%S","native_script":null,"month_format_abbreviated":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"default_date_format_length":"medium","day_stand_alone_narrow":["M","T","W","T","F","S","S"],"day_format_abbreviated":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],"datetime_format_medium":"MMM d, y h:mm:ss a"},
+        misc_info = {"delimiters":{"quotation_start":"“","quotation_end":"”","alternate_quotation_start":"‘","alternate_quotation_end":"’"},"orientation":{"lines":"top-to-bottom","characters":"left-to-right"},"posix":{"nostr":"no:n","yesstr":"yes:y"},"plural_forms":{"category_list":["one","other"],"category_rules_function":null,"category_rules":{"one":"n is 1"},"category_rules_compiled":{"one":function (n) {if ( (( n == 1))) { return 'one'; } return;}}},"cldr_formats":{"territory":"Region: {0}","_decimal_format_decimal":".","language":"Language: {0}","percent":"#,##0%","locale":"{0} ({1})","_decimal_format_group":",","_percent_format_percent":"%","decimal":"#,##0.###","ellipsis":{"medial":"{0}…{1}","final":"{0}…","initial":"…{0}"},"list_or":{"end":"{0}, or {1}","middle":"{0}, {1}","start":"{0}, {1}","2":"{0} or {1}"},"list":{"middle":"{0}, {1}","2":"{0} and {1}","start":"{0}, {1}","end":"{0}, and {1}"}},"fallback":[],"characters":{"more_information":"?"}};
+
+    // Legacy cjt 1.0 support
+    if ( context.YAHOO ) {
+        context.YAHOO.util.Event.onDOMReady(function() {
+            var Locale = CPANEL.Locale.generateClassFromCldr(locale, functions, datetime_info, misc_info);
+            context.LOCALE = new Locale();
+        });
+    }
+
+    // Modern cjt 2.0 support
+    context.CJT2_loader = {
+        current_locale: locale,
+        CLDR: {}
+    };
+
+    var CLDR = {
+        locale: locale,
+        functions: functions,
+        datetime_info: datetime_info,
+        misc_info: misc_info
+    };
+
+    context.CJT2_loader.CLDR[locale] = CLDR;
+    context.CLDR = CLDR;
+
+})(window);
+//~~END-GENERATED~~
+        </script>
+
+        
+        <script type="text/javascript" src="/cPanel_magic_revision_1761229499/frontend/jupiter/core/web-components/dist/jupiter-web-components.cmb.min.js?locale=en&amp;locale_optional=1&amp;locale_revision=1773096564"></script><script type="text/javascript" id="" charset="">window._trfq=window._trfq||[];window._gaDataLayer=window._gaDataLayer||[];window._gaDataLayer.push({loadSource:"gtm"});window.trafficTagLoaded=!0;function onLoadTcc(){"undefined"===typeof window._tccInternal&&require(["tcc"])}var script=document.createElement("script");script.addEventListener&&script.addEventListener("load",onLoadTcc);script.src="https://img1.wsimg.com/signals/js/clients/tcc/tcc.min.js";document.head.appendChild(script);</script>
+
+        
+
+    <script type="text/javascript">
+        var PAGE = PAGE || {};
+        PAGE.homeDir = "\/home\/r1clkhqj64ol";
+        PAGE.repos = [{"tasks":[],"repository_root":"/home/r1clkhqj64ol/repositories/ToddTheTeach","name":"ToddTheTeach"}];
+        PAGE.repoErrors = "";
+        PAGE.fileManagerURL = "..\/filemanager\/index.html?dir=";
+        PAGE.gitwebURL = "..\/..\/..\/3rdparty\/gitweb\/gitweb.cgi?p="
+        PAGE.deprefix = "..\/";
+        PAGE.hasFileManagerAccess = "1";
+        PAGE.hasShellAccess = "1";
+        PAGE.reposListPageSize = 10;
+        PAGE.securityToken = "\/cpsess6280454157";
+    </script>
+
+        
+        <script>
+            MASTER.applicationList      = [{"category":"Files","description":"File Manager","url_is_absolute":0,"key":"file_manager","name":"File Manager","target":"file_manager","url":"filemanager/index.html","searchText":"File Manager file-manager"},{"category":"Files","url":"cpanelpro/images.html","searchText":"image manager resize manager scaler thumbnailer format Images","url_is_absolute":0,"key":"images","name":"Images","description":"Images"},{"category":"Files","url":"htaccess/index.html","description":"Directory Privacy","searchText":"Directory Privacy passwordprotect password protect","url_is_absolute":0,"name":"Directory Privacy","key":"directory_privacy"},{"description":"Disk Usage","name":"Disk Usage","url_is_absolute":0,"searchText":"Disk Usage disk space usage disk-usage","key":"disk_usage","category":"Files","url":"diskusage/index.html"},{"category":"Files","url":"webdav/accounts_webdav.html","description":"Web Disk","searchText":"Web Disk webdav webdisk","url_is_absolute":0,"key":"web_disk","name":"Web Disk"},{"category":"Files","url":"ftp/accounts.html","description":"FTP Accounts","searchText":"FTP Accounts ftp create","url_is_absolute":0,"name":"FTP Accounts","key":"ftp_accounts"},{"searchText":"FTP Connections ftp accounts ftp session control","url_is_absolute":0,"name":"FTP Connections","key":"ftp_connections","description":"FTP Connections","category":"Files","url":"ftp/session.html"},{"url_is_absolute":0,"key":"backup","searchText":"Backup restore","name":"Backup","description":"Backup","url":"backup/index.html","category":"Files"},{"category":"Files","url":"backup/wizard.html","searchText":"Backup Wizard restore","url_is_absolute":0,"name":"Backup Wizard","key":"backup_wizard","description":"Backup Wizard"},{"description":"Host Git™ repositories.","name":"Git™ Version Control","url_is_absolute":0,"searchText":"Git version control vcs repositories repository repo master checkout check out branch clone remote source code commit head gitweb history log publish deployment build continuous integration Git™ Version Control","key":"version_control","url":"version_control/index.html","category":"Files"},{"target":"_blank","url":"sql/PhpMyAdmin.html","searchText":"phpMyAdmin database","category":"Databases","description":"phpMyAdmin","url_is_absolute":0,"key":"php_my_admin","name":"phpMyAdmin"},{"url":"sql/index.html","category":"Databases","description":"MySQL® Databases","searchText":"MySQL Databases MySQL® Databases","url_is_absolute":0,"name":"MySQL® Databases","key":"mysql_databases"},{"url":"sql/wizard1.html","category":"Databases","description":"MySQL® Database Wizard","url_is_absolute":0,"key":"mysql_database_wizard","searchText":"MySQL Database Wizard mysql database MySQL® Database Wizard","name":"MySQL® Database Wizard"},{"searchText":"Remote MySQL Remote MySQL®","url_is_absolute":0,"key":"remote_mysql","name":"Remote MySQL®","description":"Remote MySQL®","category":"Databases","url":"sql/managehost.html"},{"description":"Site Publisher","url_is_absolute":0,"key":"site_publisher","searchText":"site publisher builder start website generator template Site Publisher","name":"Site Publisher","url":"site_publisher/index.html","category":"Domains"},{"category":"Domains","url":"domains/index.html","description":"Create, manage, and delete multiple domains.","url_is_absolute":0,"name":"Domains","searchText":"domains parked park aliases alias addon subdomain domain force https redirect Domains","key":"domains"},{"url_is_absolute":0,"name":"Redirects","searchText":"Redirects rewrite modrewrite","key":"redirects","description":"Redirects","url":"mime/redirect.html","category":"Domains"},{"category":"Domains","url":"zone_editor/index.html","description":"Zone Editor","url_is_absolute":0,"name":"Zone Editor","searchText":"zone editor advanced simple caa cname a aaaa txt dkim dmarc spf mx srv record dns Zone Editor","key":"zone_editor"},{"description":"Manage your dynamic DNS domains.","url_is_absolute":0,"name":"Dynamic DNS","searchText":"dynamic dns ddns ip subdomain  Dynamic DNS","key":"dynamic_dns","category":"Domains","url":"dynamic-dns/index.html"},{"category":"Metrics","url":"stats/lastvisitors_landing.html","url_is_absolute":0,"key":"visitors","searchText":"latest visitors Visitors","name":"Visitors","description":"Visitors"},{"url":"stats/errlog.html","category":"Metrics","description":"Errors","name":"Errors","url_is_absolute":0,"searchText":"Errors errorlog error log","key":"errors"},{"category":"Metrics","url":"stats/bandwidth.html","name":"Bandwidth","url_is_absolute":0,"searchText":"Bandwidth bandmin transfer","key":"bandwidth","description":"Bandwidth"},{"url_is_absolute":0,"name":"Raw Access","searchText":"Raw Access logs raw logs rawlogs","key":"raw_access","description":"Raw Access","url":"raw/index.html","category":"Metrics"},{"category":"Metrics","url":"stats/awstats_landing.html","description":"Awstats","url_is_absolute":0,"key":"awstats","searchText":"Awstats awstats","name":"Awstats"},{"searchText":"Webalizer stats","url_is_absolute":0,"key":"webalizer","name":"Webalizer","description":"Webalizer","url":"stats/webalizer_landing.html","category":"Metrics"},{"url_is_absolute":0,"searchText":"Webalizer FTP stats ftp","name":"Webalizer FTP","key":"webalizer_ftp","description":"Webalizer FTP","url":"stats/webalizerftp_landing.html","category":"Metrics"},{"description":"Metrics Editor","name":"Metrics Editor","url_is_absolute":0,"searchText":"Metrics Editor stats manager choose log programs","key":"metrics_editor","url":"statmanager/index.html","category":"Metrics"},{"category":"Metrics","url":"resource_usage/resource_usage.live.pl","description":"Resource Usage","url_is_absolute":0,"name":"Resource Usage","searchText":"Resource Usage","key":"lveresusage"},{"url":"../../3rdparty/installatron/index.cgi","category":"Software","key":"itgdresell","url_is_absolute":0,"searchText":"Installatron Applications Installer","name":"Installatron Applications Installer","description":"Installatron Applications Installer"},{"url":"module_installers/index.html?lang=php-pear","category":"Software","url_is_absolute":0,"searchText":"PHP PEAR Packages","name":"PHP PEAR Packages","key":"php_pear_packages","description":"PHP PEAR Packages"},{"description":"Perl Modules","url_is_absolute":0,"searchText":"Perl Modules","key":"perl_modules","name":"Perl Modules","url":"module_installers/index.html?lang=perl","category":"Software"},{"category":"Software","url":"passenger/index.html","searchText":"apps passenger ruby ror gems rails Application Manager","url_is_absolute":0,"name":"Application Manager","key":"application_manager","description":"Application Manager"},{"description":"Optimize Website","url_is_absolute":0,"key":"optimize_website","searchText":"Optimize Website","name":"Optimize Website","url":"optimize/index.html","category":"Software"},{"key":"lvephpsel","url_is_absolute":0,"searchText":"Select PHP Version","name":"Select PHP Version","description":"Select PHP Version","url":"lveversion/php_selector.live.pl","category":"Software"},{"description":"Setup Python App","searchText":"Setup Python App","url_is_absolute":0,"name":"Setup Python App","key":"lvepythonsel","category":"Software","url":"lveversion/python-selector.html.tt"},{"category":"Software","url":"lveversion/ruby-selector.html.tt","description":"Setup Ruby App","url_is_absolute":0,"key":"lverubysel","searchText":"Setup Ruby App","name":"Setup Ruby App"},{"name":"SSH Access","url_is_absolute":0,"searchText":"SSH access ssh/shell Access ssh secure shell sftp SSH Access","key":"ssh_access","description":"SSH Access","category":"Security","url":"telnet/index.html"},{"searchText":"IP Blocker ip deny manager","url_is_absolute":0,"key":"ip_blocker","name":"IP Blocker","description":"IP Blocker","url":"denyip/index.html","category":"Security"},{"url":"ssl/index.html","category":"Security","description":"SSL/TLS","searchText":"SSL/TLS certificate key csr","url_is_absolute":0,"key":"ssl_tls","name":"SSL/TLS"},{"category":"Security","url":"api_tokens/index.html","searchText":"Manage API Tokens access api connect login","url_is_absolute":0,"name":"Manage API Tokens","key":"api_tokens","description":"Create, manage, and delete API tokens."},{"category":"Security","url":"mime/hotlink.html","url_is_absolute":0,"searchText":"Hotlink Protection","name":"Hotlink Protection","key":"hotlink_protection","description":"Hotlink Protection"},{"key":"leech_protection","url_is_absolute":0,"searchText":"Leech Protection protect","name":"Leech Protection","description":"Leech Protection","category":"Security","url":"htaccess/leechprotect/leechprotect.html"},{"category":"Security","url":"security/tls_status/","description":"SSL/TLS Status","url_is_absolute":0,"name":"SSL/TLS Status","searchText":"SSL/TLS Status","key":"tls_status"},{"category":"Security","url":"security/2fa/index.html","name":"Two-Factor Authentication","url_is_absolute":0,"searchText":"Two Factor Authentication 2fa tfa Two-Factor Authentication","key":"two_factor_authentication","description":"Two-Factor Authentication"},{"searchText":"email accounts mail pop imap smtp Email Accounts","url_is_absolute":0,"name":"Email Accounts","key":"email_accounts","description":"Email Accounts","category":"Email","url":"mail/pops/index.html"},{"description":"Forwarders","key":"forwarders","url_is_absolute":0,"searchText":"Forwarders forward","name":"Forwarders","category":"Email","url":"mail/fwds.html"},{"category":"Email","url":"mail/email_routing.html","url_is_absolute":0,"searchText":"MX Entry Email Routing dns","name":"Email Routing","key":"email_routing","description":"Email Routing"},{"description":"Autoresponders","searchText":"Autoresponders autoresponder auto responders","url_is_absolute":0,"key":"autoresponders","name":"Autoresponders","category":"Email","url":"mail/autores.html"},{"description":"Default Address","url_is_absolute":0,"name":"Default Address","searchText":"Default Address","key":"default_address","url":"mail/def.html","category":"Email"},{"description":"Track Delivery","searchText":"Track Delivery Email Trace email mail delivery report","url_is_absolute":0,"name":"Track Delivery","key":"track_delivery","url":"mail/route.html","category":"Email"},{"category":"Email","url":"mail/filters/userfilters.html","description":"Global Email Filters","searchText":"Global Email Filters filter account level filtering","url_is_absolute":0,"name":"Global Email Filters","key":"global_email_filters"},{"description":"Email Filters","url_is_absolute":0,"searchText":"User Filters Email user level Filtering filter Email Filters","name":"Email Filters","key":"email_filters","category":"Email","url":"mail/filters/managefilters.html"},{"category":"Email","url":"mail/csvimport.html","url_is_absolute":0,"key":"address_importer","searchText":"Address Importer Import Addresses Forwarders Mail csv import xls import","name":"Address Importer","description":"Address Importer"},{"description":"Spam Filters","url_is_absolute":0,"key":"apache_spam_assassin","searchText":"Filtering Spam Assassin spamassassin Apache SpamAssassin Spam Filters","name":"Spam Filters","category":"Email","url":"mail/spam/index.html"},{"category":"Email","url":"gpg/index.html","description":"Encryption","url_is_absolute":0,"key":"encryption","searchText":"Encryption gpg keys GnuPG Keys","name":"Encryption"},{"category":"Email","url":"mail/calendars_and_contacts/index.html","description":"Calendars and Contacts","url_is_absolute":0,"name":"Calendars and Contacts","searchText":"email calendar contact address book CalDAV CardDAV Calendars and Contacts","key":"calendar_and_contacts"},{"url":"manage-calendar-access/index.html","category":"Email","description":"Delegate access rights for a user’s calendar &amp; contacts to other users.","url_is_absolute":0,"searchText":"calendar delegation Calendars and Contacts Sharing","key":"manage_calendar_access","name":"Calendars and Contacts Sharing"},{"url":"calendar-contact-management/index.html","category":"Email","name":"Calendars and Contacts Management","url_is_absolute":0,"searchText":"calendar contact management address book addressbook Calendars and Contacts Management","key":"calendar_contact_management","description":"Calendars and Contacts Management"},{"category":"Email","url":"mail/manage_disk_usage/","url_is_absolute":0,"key":"email_disk_usage","searchText":"email accounts mail disk usage bytes mb size Email Disk Usage","name":"Email Disk Usage","description":"Email Disk Usage"},{"description":"Installatron Applications Installer","url_is_absolute":0,"searchText":"Installatron Applications Installer","name":"Installatron Applications Installer","key":"itgdresell_widget_content","url":"../../3rdparty/installatron/index.cgi","category":"Applications"},{"description":"Installatron Applications Installer","name":"Installatron Applications Installer","url_is_absolute":0,"searchText":"Installatron Applications Installer","key":"itroot_widget_content","category":"Applications","url":"../../3rdparty/installatron/index.cgi"},{"description":"View and manage your account preferences.","searchText":"account preferences consent privacy notification system position  Account Preferences","url_is_absolute":0,"name":"Account Preferences","key":"account_preferences","category":"Preferences","url":"account-preferences/index.html"},{"url":"setlang/index.html","category":"Preferences","description":"Change Language","key":"change_language","url_is_absolute":0,"searchText":"language setlang Change Language","name":"Change Language"},{"category":"Preferences","url":"contact/index.html","description":"Contact Information","searchText":"contact email Contact Information","url_is_absolute":0,"name":"Contact Information","key":"contact_information"},{"category":"Preferences","url":"user_manager/index.html","url_is_absolute":0,"name":"User Manager","searchText":"password change ftp email webdisk webdav service User Manager","key":"user_manager","description":"Manage the users who can access various systems on your cPanel account."},{"url":"terminal/index.html","category":"Advanced","url_is_absolute":0,"key":"terminal","searchText":"terminal bash tcsh command line shell ssh Terminal","name":"Terminal","description":"Access an in-browser terminal application for direct command-line access within a cPanel session."},{"searchText":"Cron Jobs cronjob crontab edit","url_is_absolute":0,"name":"Cron Jobs","key":"cron_jobs","description":"Cron Jobs","url":"cron/index.html","category":"Advanced"},{"description":"Track DNS","url_is_absolute":0,"name":"Track DNS","searchText":"Track DNS traceroute tracert dnslookup dig network tools","key":"track_dns","url":"net/index.html","category":"Advanced"},{"url":"indexmanager/index.html","category":"Advanced","url_is_absolute":0,"searchText":"Indexes index manager","name":"Indexes","key":"indexes","description":"Indexes"},{"url_is_absolute":0,"searchText":"Error Pages errorlog error_log error log","key":"error_pages","name":"Error Pages","description":"Error Pages","url":"err/index.html","category":"Advanced"},{"url_is_absolute":0,"key":"apache_handlers","searchText":"Apache Handlers apache handlers extension configure","name":"Apache Handlers","description":"Apache Handlers","category":"Advanced","url":"mime/handle.html"},{"url":"mime/mime.html","category":"Advanced","description":"MIME Types","searchText":"MIME Types mimetype types","url_is_absolute":0,"name":"MIME Types","key":"mime_types"},{"searchText":"Notifications","name":"Notifications","url":"notifications/index.html.tt"},{"url":"index.html","name":"Home","searchText":"Home Main"}];
+            MASTER.securityToken        = "\/cpsess6280454157";
+            MASTER.cpanelTheme          = "jupiter"
+            MASTER.footerLogo         = "cpanel-logo-orange.svg";
+            MASTER.debug                = false;
+            MASTER.focus_feature_search = false;
+        </script>
+
+        <script type="text/javascript" defer="">
+            // Wait for require.js to load using the new event, then load the master bundle.
+            window.addEventListener("library-loaded", function(e){
+                if (e.detail.library.match(/requirejs/) ) {
+                    
+                        // This will ensure the CLDR data from the cjt2.cmb file is loaded and processed
+                        // before loading master module.
+                        require(["locale!cjtBuild"], function(){
+                            require(["master/master"], function(MASTER){ MASTER(); });
+                        });
+                    
+                }
+            });
+        </script>
+
+        
+        
+        <script type="text/javascript" src="/cPanel_magic_revision_1705007156/frontend/jupiter/_assets/deferred/master.deferred.cmb.min.js" defer="" async=""></script>
+        
+        <script>
+            register_interfacecfg_nvdata('cp-welcome-panel_dismissed');
+        </script>
+    
+
+
+</body></html>

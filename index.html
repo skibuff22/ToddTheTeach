@@ -16,7 +16,7 @@
   <meta property="og:title" content="Todd the Teach | Fast Learner, Troubleshooter & Web Expert">
   <meta property="og:description"
     content="Todd Doane: Rapidly absorbing new technologies, fearlessly troubleshooting complex problems, and delivering scalable enterprise architectures and clean web designs.">
-  <meta property="og:image" content="https://toddtheteach.com/android-chrome-512x512.png">
+  <meta property="og:image" content="https://toddtheteach.com/images/android-chrome-512x512.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
@@ -24,15 +24,15 @@
   <meta property="twitter:title" content="Todd the Teach | Fast Learner, Troubleshooter & Web Expert">
   <meta property="twitter:description"
     content="Todd Doane: Rapidly absorbing new technologies, fearlessly troubleshooting complex problems, and delivering scalable enterprise architectures and clean web designs.">
-  <meta property="twitter:image" content="https://toddtheteach.com/android-chrome-512x512.png">
+  <meta property="twitter:image" content="https://toddtheteach.com/images/android-chrome-512x512.png">
 
   <!-- Favicons -->
-  <link rel="icon" href="favicon.ico" sizes="48x48">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="images/favicon.ico" sizes="48x48">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
 
   <!-- Preconnect and Google Fonts (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +121,7 @@
         <h2 class="section-title">Beyond the <span class="highlight">Resume</span></h2>
         <p class="section-subtitle">A resume tells you where I've been. Let me show you what I can do.</p>
         <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="tdoaneCV.pdf?v=2026" target="_blank" class="btn btn-outline">Download CV (PDF)</a>
+          <a href="docs/tdoaneCV.pdf?v=2026" target="_blank" class="btn btn-outline">Download CV (PDF)</a>
           <a href="tdoaneCV.html?v=2026" class="btn btn-primary">View CV (HTML)</a>
         </div>
       </div>
@@ -260,6 +260,18 @@
       </div>
 
       <div class="projects-grid">
+        <!-- Calyx AI -->
+        <div class="project-card glass-panel" style="background: var(--bg-primary);">
+          <h3>Calyx AI (.net)</h3>
+          <div class="project-tags">
+            <span class="project-tag" style="background-color: var(--accent); color: white;">In-Progress / MVP Alpha</span>
+            <span class="project-tag">Azure Serverless</span>
+            <span class="project-tag">AI Platform</span>
+          </div>
+          <p>Calyx AI is an enterprise-grade, agentic AI platform designed to provide an automated "brand voice and technical governance" layer for modern documentation (Markdown, PDF). It acts as a safety "Calyx" (or hull) that secures content against stylistic inconsistencies, legal risks, and technical debt before it goes live.</p>
+          <p style="margin-top: 1rem;">From an engineering perspective, Calyx AI represents my deepest dive into Polyglot Serverless Architecture on Azure. It is a monorepo approach optimized for performance and cost. The transactional core is built on high-concurrency Java (Quarkus Native), providing &lt;100ms cold starts, while the specialized intelligence engine and agentic workflows are built using Python (3.13 AsyncIO). The frontend dashboard uses React/TypeScript, all interconnected using Azure Event Grid and hosted via Azure Static Web Apps.</p>
+        </div>
+
         <!-- ToddTheTeach -->
         <div class="project-card glass-panel" style="background: var(--bg-primary);">
           <h3>ToddTheTeach Refresh & CI/CD</h3>
