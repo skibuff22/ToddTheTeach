@@ -95,8 +95,8 @@ def deploy_cpanel_git():
                     
             page.wait_for_timeout(2000)
             
-            print("Clicking 'Deploy'...")
-            page.locator("text=Deploy").first.click()
+            print("Clicking 'Deploy HEAD Commit'...")
+            page.locator("text=Deploy HEAD Commit").first.click()
             
             print("Waiting for Git Deploy success message...")
             success_notification = page.locator(".alert-success, .cg-notify-message").first
