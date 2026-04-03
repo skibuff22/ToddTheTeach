@@ -1,6 +1,6 @@
-# QA Report for https://toddtheteach.com
+# QA Report for https://toddtheteach.com/?cachebreak=5
 
-Pages Crawled: 3
+Pages Crawled: 4
 
 ## 1. Broken Links & Errors
 No broken links found on crawled pages.

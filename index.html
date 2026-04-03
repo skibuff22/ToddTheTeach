@@ -270,6 +270,30 @@
           </div>
           <p>Calyx AI is an enterprise-grade, agentic AI platform designed to provide an automated "brand voice and technical governance" layer for modern documentation (Markdown, PDF). It acts as a safety "Calyx" (or hull) that secures content against stylistic inconsistencies, legal risks, and technical debt before it goes live.</p>
           <p style="margin-top: 1rem;">From an engineering perspective, Calyx AI represents my deepest dive into Polyglot Serverless Architecture on Azure. It is a monorepo approach optimized for performance and cost. The transactional core is built on high-concurrency Java (Quarkus Native), providing &lt;100ms cold starts, while the specialized intelligence engine and agentic workflows are built using Python (3.13 AsyncIO). The frontend dashboard uses React/TypeScript, all interconnected using Azure Event Grid and hosted via Azure Static Web Apps.</p>
+          
+          <div class="calyx-progress-container" style="margin-top: 1.5rem; background: rgba(10, 10, 15, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+            <h4 style="margin-top: 0; margin-bottom: 1rem; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;">Live Development Tracker</h4>
+            
+            <div class="progress-item" style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                <span style="font-weight: 600;">Overall Phase</span>
+                <!-- CALYX_PHASE_TEXT_START --><span id="calyx-phase-text" style="color: #bbb;">Phase 1 of 6</span><!-- CALYX_PHASE_TEXT_END -->
+              </div>
+              <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                <!-- CALYX_PHASE_BAR_START --><div id="calyx-phase-bar" style="height: 100%; width: 16%; background: var(--accent); transition: width 1s ease-in-out; border-radius: 3px;"></div><!-- CALYX_PHASE_BAR_END -->
+              </div>
+            </div>
+
+            <div class="progress-item">
+              <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                <span style="font-weight: 600;">Current Sprint</span>
+                <!-- CALYX_SPRINT_TEXT_START --><span id="calyx-sprint-text" style="color: #bbb;">Sprint 1 of 16</span><!-- CALYX_SPRINT_TEXT_END -->
+              </div>
+              <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                <!-- CALYX_SPRINT_BAR_START --><div id="calyx-sprint-bar" style="height: 100%; width: 6%; background: linear-gradient(90deg, var(--accent) 0%, rgba(255,255,255,0.8) 100%); transition: width 1s ease-in-out; border-radius: 3px;"></div><!-- CALYX_SPRINT_BAR_END -->
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- ToddTheTeach -->
