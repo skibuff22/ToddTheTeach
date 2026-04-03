@@ -8,6 +8,7 @@ import sys
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(base_dir, "executions"))
 import deploy_now
+import deploy_cpanel
 
 def update_calyx_progress():
     print(f"[{datetime.now()}] Reading Calyx AI Project Tracker...")
@@ -101,9 +102,10 @@ def update_calyx_progress():
         print("Updated index.html successfully.")
         
         # 4. Trigger Deployment
-        print("Triggering deployment with deploy_now...")
+        print("Triggering deployment...")
         os.chdir(base_dir) # ensure we are in the repo root for git commands
-        deploy_now.deploy_cpanel_git()
+        deploy_now.git_push()
+        deploy_cpanel.deploy_cpanel()
         
         return True
 

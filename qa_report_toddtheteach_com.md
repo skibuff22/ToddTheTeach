@@ -1,9 +1,9 @@
-# QA Report for https://toddtheteach.com/?cachebreak=5
+# QA Report for https://toddtheteach.com/?cachebreak=9
 
 Pages Crawled: 4
 
 ## 1. Broken Links & Errors
-No broken links found on crawled pages.
+- https://toddtheteach.com/?cachebreak=9 (Status: DEPLOYMENT FAILURE: Expected text 'Development Tracker' not found on live site.)
 
 ## 2. Image Issues
 **Broken Images:** 0
