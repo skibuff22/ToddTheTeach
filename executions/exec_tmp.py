@@ -1,17 +1,22 @@
-import pandas as pd
-import sys
+import openpyxl
 
 file_path = r"C:\Users\tdoan\GitHub\Calyx-Ai.net\Project-Tracker.xlsx"
 
-try:
-    xl = pd.ExcelFile(file_path)
-    print("----- DASHBOARD -----")
-    df_dash = xl.parse("Dashboard", skiprows=3) # Row 3 in 0-index was the header
-    print(df_dash.head(10).to_string())
-    
-    print("\n----- SPRINT PLAN -----")
-    df_sprint = xl.parse("Sprint Plan")
-    print(df_sprint.head(15).to_string())
-    
-except Exception as e:
-    print(f"Error reading Excel: {e}")
+wb = openpyxl.load_workbook(file_path)
+
+print("--- Sprint Plan ---")
+ws = wb["Sprint Plan"]
+for r in range(1, 20):
+    valA = ws.cell(row=r, column=1).value
+    valG = ws.cell(row=r, column=7).value
+    if valA:
+        print(f"Row {r}: Sprint {valA} | Status: {valG}")
+
+print("\n--- Dashboard ---")
+wd = wb["Dashboard"]
+for r in range(1, 15):
+    valA = wd.cell(row=r, column=1).value
+    valD = wd.cell(row=r, column=4).value
+    if valA:
+        print(f"Row {r}: Phase {valA} | Status: {valD}")
+
