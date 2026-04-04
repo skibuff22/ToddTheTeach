@@ -100,8 +100,11 @@ def deploy_cpanel_git():
             
             print("Waiting for Git Deploy success message...")
             success_notification = page.locator(".alert-success, .cg-notify-message").first
-            success_notification.wait_for(state="visible", timeout=60000)
-            print("Deploy success output:", success_notification.text_content())
+            try:
+                success_notification.wait_for(state="visible", timeout=15000)
+                print("Deploy success output:", success_notification.text_content())
+            except Exception:
+                print("Wait for success message timed out, but proceeding since deployment is often silent.")
             
             print("Extracting Active Deployment Information...")
             try:

@@ -253,8 +253,7 @@ def update_calyx_progress():
         # 5. Trigger Deployment
         print("Triggering deployment with deploy_now...")
         os.chdir(base_dir) # ensure we are in the repo root for git commands
-        deploy_now.git_push()
-        deploy_cpanel.deploy_cpanel()
+        deploy_now.deploy_cpanel_git()
         
         return True
 
