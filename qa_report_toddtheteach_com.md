@@ -1,9 +1,9 @@
-# QA Report for https://toddtheteach.com/?cachebreak=fixed5
+# QA Report for https://toddtheteach.com
 
-Pages Crawled: 4
+Pages Crawled: 3
 
 ## 1. Broken Links & Errors
-- https://toddtheteach.com/?cachebreak=fixed5 (Status: DEPLOYMENT FAILURE: Expected text 'View Website' not found on live site.)
+No broken links found on crawled pages.
 
 ## 2. Image Issues
 **Broken Images:** 0
