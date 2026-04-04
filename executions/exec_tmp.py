@@ -1,22 +1,30 @@
-import openpyxl
+import pandas as pd
+import re
 
 file_path = r"C:\Users\tdoan\GitHub\Calyx-Ai.net\Project-Tracker.xlsx"
 
-wb = openpyxl.load_workbook(file_path)
-
-print("--- Sprint Plan ---")
-ws = wb["Sprint Plan"]
-for r in range(1, 20):
-    valA = ws.cell(row=r, column=1).value
-    valG = ws.cell(row=r, column=7).value
-    if valA:
-        print(f"Row {r}: Sprint {valA} | Status: {valG}")
-
-print("\n--- Dashboard ---")
-wd = wb["Dashboard"]
-for r in range(1, 15):
-    valA = wd.cell(row=r, column=1).value
-    valD = wd.cell(row=r, column=4).value
-    if valA:
-        print(f"Row {r}: Phase {valA} | Status: {valD}")
-
+try:
+    xl = pd.ExcelFile(file_path)
+    df_backlog = xl.parse("Backlog")
+    
+    # calculate total sprints
+    sprints = pd.to_numeric(df_backlog['Sprint'], errors='coerce').dropna()
+    total_sprints = int(sprints.max()) if not sprints.empty else 0
+    print(f"Total Sprints: {total_sprints}")
+    
+    # calculate phases
+    def extract_phase(epic_str):
+        if pd.isna(epic_str):
+             return None
+        match = re.search(r'Phase\s+(\d+)', str(epic_str), re.IGNORECASE)
+        if match:
+             return int(match.group(1))
+        return None
+        
+    df_backlog['Phase_Num'] = df_backlog['Epic'].apply(extract_phase)
+    phases = df_backlog['Phase_Num'].dropna()
+    total_phases = int(phases.max()) if not phases.empty else 0
+    print(f"Total Phases: {total_phases}")
+    
+except Exception as e:
+    print(f"Error: {e}")
