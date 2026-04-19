@@ -80,13 +80,16 @@ def deploy_cpanel_git():
             page.locator("text=Update from Remote").first.click()
             
             print("Waiting for Git Pull success message (this may take up to 60 seconds)...")
-            # Usually cPanel shows a notification or alert success
-            success_notification = page.locator(".alert-success, .cg-notify-message").first
-            success_notification.wait_for(state="visible", timeout=60000)
-            print("Pull success output:", success_notification.text_content())
+            # Wait for an alert-success that does NOT have the ng-hide class
+            page.wait_for_selector(".alert-success:not(.ng-hide), .cg-notify-message:visible", state="visible", timeout=60000)
+            
+            # Fetch the text of the first visible one
+            visible_alerts = page.locator(".alert-success:not(.ng-hide), .cg-notify-message:visible").all()
+            if visible_alerts:
+                print("Pull success output:", visible_alerts[-1].text_content())
             
             # Clear notifications if there's a close button to prevent overlapping during deploy
-            close_btns = page.locator(".cg-notify-message .close, .alert-success .close").all()
+            close_btns = page.locator(".cg-notify-message .close, .alert-success:not(.ng-hide) .close").all()
             for btn in close_btns:
                 try:
                     btn.click(timeout=1000)
@@ -99,10 +102,11 @@ def deploy_cpanel_git():
             page.locator("text=Deploy HEAD Commit").first.click()
             
             print("Waiting for Git Deploy success message...")
-            success_notification = page.locator(".alert-success, .cg-notify-message").first
             try:
-                success_notification.wait_for(state="visible", timeout=15000)
-                print("Deploy success output:", success_notification.text_content())
+                page.wait_for_selector(".alert-success:not(.ng-hide), .cg-notify-message:visible", state="visible", timeout=15000)
+                visible_alerts = page.locator(".alert-success:not(.ng-hide), .cg-notify-message:visible").all()
+                if visible_alerts:
+                    print("Deploy success output:", visible_alerts[-1].text_content())
             except Exception:
                 print("Wait for success message timed out, but proceeding since deployment is often silent.")
             
